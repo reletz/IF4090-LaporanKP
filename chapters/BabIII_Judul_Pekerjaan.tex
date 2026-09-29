@@ -1,0 +1,74 @@
+\chapter{Pengujian Perangkat Lunak Aplikasi Komatsu ESS}
+
+Bab III ini membahas tahapan dan dinamika pelaksanaan pekerjaan penulis sebagai \textit{Quality Assurance} pada proyek Komatsu ESS. Pekerjaan berupa penyelesaian tugas pengujian yang diberikan perusahaan, sehingga pembahasan disusun mengikuti tahapan pekerjaan, mulai dari rencana kerja hingga hasil yang diperoleh. Dinamika kerja, kendala, dan sikap profesional yang dijalani penulis dibahas pada bagian tersendiri.
+
+\section{Rencana Kerja}
+
+\subsection{Pembahasan Rencana Kerja}
+Pekerjaan diawali dengan pertemuan antara penulis, rekan KP, dan pembimbing di PT Radya Anugrah Digital. Pada pertemuan tersebut pembimbing menjelaskan proyek Komatsu ESS, peran tim QA, dan hal yang diharapkan dari mahasiswa KP. Hasil pertemuan adalah sebagai berikut:
+\begin{enumerate}[label=\alph*)]
+\item penulis dan rekan KP bekerja sebagai \textit{Quality Assurance} pada proyek Komatsu ESS;
+\item pengujian dilakukan bertahap, yaitu penyusunan draf skrip uji, pengujian per modul, pengujian antarmodul, dan pengujian regresi;
+\item rencana kerja dituangkan dalam TOR dan jadwal pada Lampiran A; dan
+\item kegiatan harian dicatat pada \textit{log activity} dan dilaporkan kepada pembimbing.
+\end{enumerate}
+\ISI{hasil pertemuan awal yang sebenarnya dan siapa yang hadir, jika berbeda dari uraian di atas}
+
+\subsection{Orientasi Aplikasi dan Lingkungan Kerja}
+Pada dua minggu pertama, penulis mempelajari aplikasi Komatsu ESS, alur bisnis yang didukungnya, serta alat dan prosedur kerja tim. Kegiatan ini penting karena penguji perlu memahami perilaku aplikasi yang benar sebelum dapat menilai apakah suatu hasil menyimpang. \TEKNIS{dokumen yang dipelajari (misalnya spesifikasi kebutuhan dan desain), alat yang diperkenalkan, dan lingkungan uji yang dipakai}
+
+\section{Penyusunan Draf Skrip Uji}
+Skrip uji (\textit{test script}) adalah panduan tertulis yang memuat langkah pengujian, data masukan, dan hasil yang diharapkan untuk memeriksa satu fungsi aplikasi. Skrip uji menjadi dasar pengujian agar hasilnya dapat diulang dan dibandingkan oleh siapa pun yang menjalankannya. Penulis menyusun draf skrip uji dengan langkah berikut:
+\begin{enumerate}[label=\arabic*)]
+\item mempelajari kebutuhan dan perilaku fitur pada modul yang ditugaskan;
+\item mengidentifikasi skenario pengujian, baik skenario normal maupun skenario yang tidak normal;
+\item menuliskan langkah, data uji, dan hasil yang diharapkan pada setiap skrip; dan
+\item meminta peninjauan pembimbing lalu memperbaiki skrip berdasarkan masukan.
+\end{enumerate}
+\TEKNIS{format dan alat yang dipakai untuk menulis skrip uji, contoh satu skrip uji (disamarkan bila rahasia), dan jumlah skrip yang dihasilkan}
+
+Pada tahap ini penulis menemui kesulitan karena sebagian kebutuhan fitur belum tertulis secara rinci. Untuk mengatasinya, penulis bertanya langsung kepada anggota tim yang memahami fitur tersebut dan mencatat jawabannya di skrip uji. \ISI{kendala yang benar-benar dialami pada tahap ini}
+
+\section{Pengujian per Modul}
+Pengujian per modul (\textit{module testing}) memeriksa setiap modul secara terpisah untuk memastikan fungsinya berjalan sesuai kebutuhan. Penulis menjalankan skrip uji pada modul yang ditugaskan dan mencatat hasil setiap langkah sebagai lulus atau gagal. Jika hasil aktual berbeda dari hasil yang diharapkan, penulis melaporkan cacat kepada tim pengembang. Laporan cacat memuat langkah reproduksi, hasil yang diharapkan, hasil aktual, tingkat keparahan, dan bukti berupa tangkapan layar atau rekaman. Setelah cacat diperbaiki, penulis memeriksa kembali perbaikannya.
+
+Modul yang diuji penulis dan rekan KP dibagi oleh pembimbing agar pekerjaan tidak tumpang tindih. \TEKNIS{daftar modul yang diuji penulis, jenis pengujian (fungsional, antarmuka, validasi masukan, dll.), alat pelacak cacat, serta contoh cacat yang ditemukan dan tingkat keparahannya}
+
+\section{Pengujian Antarmodul}
+Pengujian antarmodul (\textit{integration testing}) memeriksa alur kerja yang melibatkan lebih dari satu modul, misalnya data yang dibuat pada satu modul dan digunakan pada modul lain. Pengujian ini dilakukan setelah pengujian per modul agar cacat di dalam modul tidak mengganggu hasil pengujian interaksi. Pada tahap ini penulis dan rekan KP bekerja bersama karena alur yang diuji sering melibatkan modul dari kedua pihak. \TEKNIS{alur lintas modul yang diuji, cacat interaksi yang ditemukan, dan cara pelaporannya}
+
+\section{Pengujian Regresi}
+Pengujian regresi dilakukan untuk memastikan perbaikan cacat atau perubahan fitur tidak merusak bagian aplikasi yang sebelumnya sudah berfungsi. Penulis menjalankan ulang skrip uji yang relevan pada \textit{build} terbaru dan memverifikasi bahwa cacat yang dilaporkan telah teratasi. Tahap ini berlangsung paling singkat karena skrip uji dan urutan pengujian sudah tersedia dari tahap sebelumnya, sehingga penulis dapat menjalankannya ulang tanpa menyusun ulang dari awal. \TEKNIS{cakupan regresi (semua skrip atau sebagian), jumlah cacat yang lulus verifikasi, dan cacat yang masih terbuka}
+
+\section{Dinamika Pekerjaan dan Profesionalisme}
+Selama KP, penulis bekerja setiap hari dengan tim proyek dan berkomunikasi dengan pengembang mengenai cacat yang ditemukan. Beberapa hal yang menjadi dinamika pekerjaan adalah sebagai berikut:
+\begin{enumerate}[label=\arabic*)]
+\item \textbf{Perubahan kebutuhan dan \textit{build}.} Fitur dan \textit{build} aplikasi dapat berubah selama pengujian sehingga skrip uji perlu diperbarui. Penulis menyesuaikan skrip dan memberi tahu pembimbing agar jadwal tetap sesuai.
+\item \textbf{Perbedaan pendapat mengenai cacat.} Sesekali pengembang menilai suatu temuan sebagai perilaku yang memang dirancang. Penulis menyampaikan bukti dan merujuk pada kebutuhan, lalu menyerahkan keputusan akhir kepada pembimbing.
+\item \textbf{Koordinasi dengan rekan KP.} Penulis dan rekan berbagi informasi tentang temuan dan hasil uji agar tidak ada cacat yang dilaporkan ganda.
+\end{enumerate}
+\ISI{ubah atau ganti butir di atas dengan kejadian dan kendala yang benar-benar dialami}
+
+Dalam bekerja, penulis menerapkan sikap profesional, yaitu hadir tepat waktu, mencatat kegiatan harian pada \textit{log activity}, dan menjaga kerahasiaan informasi proyek serta data klien. Penulis juga menyampaikan temuan secara objektif dan sopan, dengan fokus pada perilaku aplikasi, bukan pada pihak yang membuatnya.
+
+\section{Hasil Pekerjaan}
+Hasil pekerjaan penulis selama KP dirangkum pada Tabel~\ref{tab:hasil-pekerjaan}.
+
+\begin{table}[H]
+\caption{Hasil pekerjaan penulis}
+\label{tab:hasil-pekerjaan}
+\centering
+\begin{tabularx}{\textwidth}{|p{4cm}|X|p{3cm}|}
+\hline
+\textbf{Hasil} & \textbf{Keterangan} & \textbf{Jumlah} \\
+\hline
+Skrip uji & Skrip uji untuk modul yang ditugaskan & \TEKNIS{jumlah} \\
+\hline
+Laporan cacat & Cacat yang ditemukan pada pengujian per modul, antarmodul, dan regresi & \TEKNIS{jumlah} \\
+\hline
+Laporan hasil pengujian & Ringkasan hasil pengujian per modul, antarmodul, dan regresi & \TEKNIS{jumlah} \\
+\hline
+\end{tabularx}
+\end{table}
+
+Skrip uji dan laporan cacat tersebut digunakan tim pengembang untuk memperbaiki aplikasi sehingga kualitas Komatsu ESS meningkat sebelum diserahkan kepada klien. \TEKNIS{kondisi akhir: apakah seluruh cacat berat sudah tertangani, dan pekerjaan yang belum selesai}

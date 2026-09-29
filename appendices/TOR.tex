@@ -1,0 +1,244 @@
+\clearpage
+\section*{LAMPIRAN A Term of References}
+\addcontentsline{toc}{chapter}{Lampiran A. \textit{Term of References} (TOR)}
+\label{app:tor}
+
+\begin{framed}
+\begin{center}
+{\bfseries\Large TERM OF REFERENCES}\\[4pt]
+{\bfseries Pengujian Perangkat Lunak (\textit{Quality Assurance}) Aplikasi Komatsu ESS}\\[2pt]
+PT Radya Anugrah Digital
+\end{center}
+
+\begin{enumerate}[label=\arabic*.,leftmargin=1.2cm,itemsep=6pt]
+
+\item \textbf{TUJUAN PEKERJAAN}
+
+PT Radya Anugrah Digital (Radyalabs) mengembangkan aplikasi Komatsu ESS untuk klien, yaitu Komatsu. Agar aplikasi tersebut berfungsi sesuai kebutuhan klien dan bebas dari cacat yang berarti sebelum diserahkan, diperlukan kegiatan pengujian yang terencana. Tujuan pekerjaan ini adalah memastikan kualitas aplikasi Komatsu ESS melalui kegiatan \textit{Quality Assurance} (QA), yaitu penyusunan skrip uji, pengujian per modul, pengujian antarmodul, dan pengujian regresi, disertai pelaporan cacat (\textit{bug}). Pekerjaan ini dilaksanakan oleh dua mahasiswa KP yang sama-sama berperan sebagai \textit{Quality Assurance}. Hasil pekerjaan diperuntukkan bagi tim pengembang Radyalabs dan, melalui tim tersebut, bagi Komatsu sebagai pengguna akhir.
+
+\item \textbf{LINGKUP PEKERJAAN}
+
+Lingkup pekerjaan tim QA pada proyek Komatsu ESS mencakup:
+\begin{enumerate}[label=\arabic*)]
+\item analisis kebutuhan dan spesifikasi fitur sebagai dasar pengujian;
+\item penyusunan draf skrip uji (\textit{test script});
+\item pengujian per modul (\textit{module testing});
+\item pengujian antarmodul (\textit{integration testing});
+\item pengujian regresi setelah perbaikan atau perubahan fitur;
+\item pelaporan dan pelacakan cacat hingga tuntas; dan
+\item pendokumentasian hasil pengujian.
+\end{enumerate}
+Bagian yang dikerjakan mahasiswa KP adalah pengujian modul-modul yang ditugaskan oleh pembimbing kepada masing-masing mahasiswa, dengan rincian yang ditetapkan pembimbing selama KP berlangsung.
+
+\item \textbf{HASIL PEKERJAAN}
+
+Hasil pekerjaan yang diharapkan adalah:
+\begin{enumerate}[label=\arabic*)]
+\item skrip uji untuk modul yang ditugaskan;
+\item laporan cacat yang memuat langkah reproduksi, hasil yang diharapkan, hasil aktual, tingkat keparahan, dan bukti (\textit{screenshot} atau rekaman);
+\item laporan hasil pengujian per modul, antarmodul, dan regresi; dan
+\item aplikasi Komatsu ESS yang kualitasnya meningkat karena cacat yang ditemukan telah diperbaiki oleh tim pengembang.
+\end{enumerate}
+
+\item \textbf{BATASAN}
+
+\begin{enumerate}[label=\arabic*)]
+\item Pekerjaan mahasiswa dibatasi pada kegiatan pengujian. Perbaikan cacat pada kode sumber menjadi tanggung jawab tim pengembang.
+\item Pengujian dilakukan pada lingkungan pengujian (\textit{staging}) dan bukan pada lingkungan produksi milik klien.
+\item Mahasiswa hanya mengakses fitur, data, dan dokumen proyek sesuai izin yang diberikan pembimbing.
+\item Seluruh informasi proyek dan data klien bersifat rahasia dan tidak boleh disebarluaskan. Isi laporan KP yang memuat informasi proyek harus mendapat persetujuan pembimbing.
+\item Spesifikasi perangkat yang digunakan mengikuti ketentuan pada butir Lingkungan Pengembangan.
+\end{enumerate}
+
+\item \textbf{ASUMSI}
+
+\begin{enumerate}[label=\arabic*)]
+\item Dokumen kebutuhan atau spesifikasi fitur tersedia dan dapat diakses oleh mahasiswa.
+\item Lingkungan pengujian, akun uji, dan data uji disediakan oleh perusahaan.
+\item Build aplikasi yang akan diuji tersedia sesuai jadwal rilis tim pengembang.
+\item Pembimbing dan tim pengembang tersedia untuk klarifikasi kebutuhan dan pembahasan cacat.
+\item Ketergantungan pada jadwal pengembangan dan perubahan kebutuhan dari klien dapat menggeser jadwal pengujian.
+\end{enumerate}
+
+\Needspace{10\baselineskip}
+\item \textbf{METODOLOGI PEKERJAAN}
+
+Pekerjaan dilaksanakan dengan siklus pengujian perangkat lunak yang berjalan beriringan dengan iterasi pengembangan aplikasi. Pengujian dilakukan secara bertahap dari cakupan kecil ke cakupan luas, yaitu dari modul, lalu antarmodul, lalu regresi. Tahapan tersebut dipetakan pada Tabel~A.1. Pelaporan cacat dilakukan di setiap tahap pengujian.
+
+\begin{center}
+\textbf{Tabel A.1} Pemetaan metodologi ke dalam tahapan pekerjaan\\[4pt]
+\small
+\begin{tabularx}{\linewidth}{|c|p{2.9cm}|X|p{2.6cm}|}
+\hline
+\textbf{No.} & \textbf{Tahap} & \textbf{Kegiatan} & \textbf{Hasil Antara} \\
+\hline
+1 & Orientasi & Mempelajari aplikasi, alur bisnis, alat kerja, dan prosedur tim & Pemahaman sistem \\
+\hline
+2 & Penyusunan draf skrip uji & Menganalisis kebutuhan fitur dan menyusun skrip uji tiap modul & Skrip uji \\
+\hline
+3 & Pengujian per modul & Menjalankan skrip uji pada masing-masing modul dan melaporkan cacat & Hasil uji modul dan laporan cacat \\
+\hline
+4 & Pengujian antarmodul & Menguji alur yang melibatkan lebih dari satu modul dan interaksi antarmodul & Hasil uji antarmodul dan laporan cacat \\
+\hline
+5 & Pengujian regresi & Menjalankan ulang pengujian untuk memverifikasi perbaikan dan memastikan fitur lain tidak terdampak & Hasil verifikasi \\
+\hline
+6 & Dokumentasi & Merangkum hasil pengujian dan menyusun laporan KP & Laporan hasil uji dan laporan KP \\
+\hline
+\end{tabularx}
+\end{center}
+
+\item \textbf{LINGKUNGAN PENGEMBANGAN}
+
+\begin{enumerate}[label=\arabic*)]
+\item Perangkat keras: komputer atau laptop kerja dan perangkat uji (\textit{smartphone}) sesuai kebutuhan pengujian.
+\item Perangkat lunak: aplikasi Komatsu ESS pada lingkungan \textit{staging}, peramban web, alat pelacak cacat dan manajemen tugas yang digunakan tim, alat dokumentasi kasus uji, serta alat komunikasi tim.
+\end{enumerate}
+Rincian versi dan alat mengikuti yang digunakan oleh tim proyek.
+
+\Needspace{12\baselineskip}
+\item \textbf{JADWAL}
+
+Kerja praktik dilaksanakan pada 22 Juni 2026 sampai dengan 22 September 2026 (13 minggu) di Bandung. Rencana kegiatan ditunjukkan pada Gambar~A.1.
+
+\begin{center}
+\begin{tikzpicture}[x=0.6cm,y=0.62cm,font=\scriptsize]
+\def\labw{7.2}
+% kepala kolom minggu
+\foreach \w in {1,...,13}{
+  \node at (\w-0.5,0.5) {\w};
+}
+\node[anchor=west] at (-\labw,0.5) {\textbf{Tahap / Minggu ke-}};
+% baris tahap: nama, awal, akhir
+\foreach \name/\a/\b [count=\r from 1] in {%
+  Orientasi/1/2,%
+  Penyusunan draf skrip uji/2/5,%
+  Pengujian per modul/5/9,%
+  Pengujian antarmodul/8/11,%
+  Pengujian regresi/11/12,%
+  Dokumentasi dan laporan KP/12/13}{
+  \node[anchor=west] at (-\labw,-\r+0.5) {\name};
+  \fill[black!65] (\a-1+0.05,-\r+0.15) rectangle (\b-0.05,-\r+0.85);
+}
+% grid
+\foreach \w in {0,...,13}{\draw[black!30] (\w,1) -- (\w,-6);}
+\foreach \r in {0,...,6}{\draw[black!30] (-\labw,1-\r-0) -- (13,1-\r-0);}
+\draw (-\labw,1) rectangle (13,-6);
+\end{tikzpicture}
+\\[4pt]\textbf{Gambar A.1} \textit{Gantt chart} rencana pelaksanaan pekerjaan
+\end{center}
+
+\item \textbf{PENUGASAN STAF}
+
+Pekerjaan dilakukan oleh dua mahasiswa dengan peran yang sama, yaitu \textit{Quality Assurance}, di bawah arahan pembimbing instansi. Seluruh tahapan pada butir Metodologi Pekerjaan dijalani oleh kedua mahasiswa. Perbedaannya terletak pada modul yang diuji, yang dibagi oleh pembimbing dan dibagi secara merata di antara keduanya. Pengujian antarmodul dilakukan bersama untuk alur yang melibatkan modul dari kedua mahasiswa.
+
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{|p{3.6cm}|p{2.6cm}|X|}
+\hline
+\textbf{Nama} & \textbf{Peran} & \textbf{Tanggung Jawab} \\
+\hline
+Naufarrel Zhafif Abhista (13523149) & \textit{Quality Assurance} & Menyusun skrip uji, menguji, dan melaporkan cacat pada modul yang ditugaskan; pengujian antarmodul dan regresi bersama \\
+\hline
+Zulfaqqar Nayaka Athadiansyah (13523094) & \textit{Quality Assurance} & Menyusun skrip uji, menguji, dan melaporkan cacat pada modul yang ditugaskan; pengujian antarmodul dan regresi bersama \\
+\hline
+\end{tabularx}
+\end{center}
+
+\Needspace{50\baselineskip}
+\item \textbf{MEKANISME PENGENDALIAN DAN PEMANTAUAN}
+
+\begin{enumerate}[label=\arabic*)]
+\item Setiap mahasiswa mencatat kegiatan hariannya pada \textit{log activity} masing-masing dan menyampaikannya kepada pembimbing.
+\item Kemajuan pengujian dilaporkan secara lisan kepada pembimbing dan tim proyek melalui pertemuan rutin, dari mahasiswa kepada pembimbing instansi.
+\item Cacat dilaporkan melalui alat pelacak cacat yang digunakan tim dan dibahas bersama tim pengembang.
+\item Pembimbing instansi memberikan umpan balik dan penilaian akhir pada akhir KP.
+\end{enumerate}
+
+Tonggak (\textit{milestone}) pekerjaan ditunjukkan pada Tabel~A.2.
+
+\begin{center}
+\textbf{Tabel A.2} \textit{Milestone} pelaksanaan pekerjaan\\[4pt]
+\small
+\begin{tabularx}{\linewidth}{|c|X|p{3.3cm}|}
+\hline
+\textbf{No.} & \textbf{Milestone} & \textbf{Perkiraan Waktu} \\
+\hline
+1 & Orientasi selesai dan penyusunan skrip uji dimulai & Minggu 2 \\
+\hline
+2 & Draf skrip uji selesai dan pengujian per modul dimulai & Minggu 5 \\
+\hline
+3 & Pengujian antarmodul dimulai & Minggu 8 \\
+\hline
+4 & Pengujian regresi dimulai & Minggu 11 \\
+\hline
+5 & Seluruh pengujian selesai dan draf laporan KP diserahkan kepada pembimbing & Minggu 12 \\
+\hline
+6 & Penilaian dan pengesahan laporan oleh pembimbing & Minggu 13 \\
+\hline
+\end{tabularx}
+\end{center}
+
+\Needspace{10\baselineskip}
+\item \textbf{MANAJEMEN RESIKO}
+
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{|p{3.6cm}|p{1.5cm}|X|}
+\hline
+\textbf{Risiko} & \textbf{Prioritas} & \textbf{Pengendalian} \\
+\hline
+Perubahan kebutuhan dari klien & Tinggi & Memperbarui skrip uji dan berkoordinasi dengan pembimbing \\
+\hline
+\textit{Build} terlambat atau tidak stabil & Tinggi & Menyesuaikan urutan pengujian dan mengerjakan skrip uji atau dokumentasi terlebih dahulu \\
+\hline
+Lingkungan atau data uji tidak tersedia & Sedang & Meminta dukungan tim pengembang lebih awal \\
+\hline
+Pemahaman domain bisnis kurang & Sedang & Bertanya kepada pembimbing dan mempelajari dokumen proyek \\
+\hline
+\end{tabularx}
+\end{center}
+
+\item \textbf{LAIN-LAIN}
+
+\begin{enumerate}[label=\arabic*)]
+\item Kedua mahasiswa menaati tata tertib, jam kerja, dan ketentuan kerahasiaan perusahaan.
+\item Hasil pekerjaan menjadi milik perusahaan, sedangkan mahasiswa berhak menggunakan pengalaman kerja untuk keperluan laporan KP dengan persetujuan pembimbing.
+\end{enumerate}
+\end{enumerate}
+
+\Needspace{20\baselineskip}
+\vspace{0.6cm}
+\begin{center}
+Bandung, \ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ 2026
+
+\vspace{0.3cm}
+Disetujui oleh,
+
+\vspace{0.4cm}
+Pembimbing Instansi
+
+\vspace{1.6cm}
+\textbf{Alyssa Christella}\\
+\textit{Project Manager} dan \textit{Mentor}\\
+PT Radya Anugrah Digital
+
+\vspace{0.6cm}
+Mahasiswa Kerja Praktik
+
+\vspace{0.4cm}
+\begin{minipage}[t]{0.48\linewidth}
+\centering
+\vspace{1.6cm}
+\textbf{Naufarrel Zhafif Abhista}\\
+NIM 13523149
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\linewidth}
+\centering
+\vspace{1.6cm}
+\textbf{Zulfaqqar Nayaka Athadiansyah}\\
+NIM 13523094
+\end{minipage}
+\end{center}
+\end{framed}
+
+\clearpage

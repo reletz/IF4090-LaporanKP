@@ -1,0 +1,97 @@
+\chapter{Organisasi atau Lingkungan Kerja Praktik}
+
+\section{Struktur Organisasi}
+PT Radya Anugrah Digital merupakan bagian dari Radya Group. Radya Group terdiri atas Radya Labs Teknologi sebagai perusahaan induk serta beberapa perusahaan yang bergerak di bidang berbeda, yaitu Radya Anugrah Digital, Raditya Alkademi Digital, Radya Acceleration Digital, dan Radya Tosanarka Vidia (Radya Labs 2023). Radya Anugrah Digital bergerak di bidang pengembangan perangkat lunak dan menjadi tempat penulis melaksanakan KP. Gambar~\ref{fig:struktur-grup} menunjukkan posisi Radya Anugrah Digital dalam Radya Group, dengan arsiran yang menandai tempat penulis bekerja.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[font=\footnotesize,>=stealth,
+  box/.style={draw,minimum width=2.9cm,minimum height=1cm,align=center,text width=2.7cm},
+  hl/.style={box,fill=black!15}]
+\node[box] (induk) at (0,0) {Radya Labs Teknologi (perusahaan induk)};
+\node[hl] (rad) at (-4.6,-2.4) {Radya Anugrah Digital};
+\node[box] (alk) at (-1.5,-2.4) {Raditya Alkademi Digital};
+\node[box] (aks) at (1.6,-2.4) {Radya Acceleration Digital};
+\node[box] (tos) at (4.7,-2.4) {Radya Tosanarka Vidia};
+\foreach \n in {rad,alk,aks,tos}{\draw[->] (induk.south) -- ++(0,-0.6) -| (\n.north);}
+\end{tikzpicture}
+\caption{Posisi PT Radya Anugrah Digital dalam Radya Group (diolah dari Radya Labs 2023)}
+\label{fig:struktur-grup}
+\end{figure}
+
+\ISI{struktur organisasi internal Radya Anugrah Digital (misalnya divisi engineering, QA, dan produk) dan posisi tim proyek Komatsu ESS di dalamnya, dari pembimbing atau HRD}
+
+\section{Unit Kerja}
+
+\subsection{Tim Proyek Komatsu ESS}
+Penulis ditempatkan pada tim proyek Komatsu ESS sebagai \textit{Quality Assurance}. Penanggung jawab proyek sekaligus \textit{mentor} penulis adalah Ibu Alyssa Christella yang berperan sebagai \textit{Project Manager}. Selain itu, tim proyek terdiri atas pengembang dan penguji. \ISI{anggota tim proyek lain dan perannya, jika ingin dicantumkan} Penulis bekerja bersama satu rekan KP, Zulfaqqar Nayaka Athadiansyah, yang juga berperan sebagai \textit{Quality Assurance}.
+
+\subsection{Lingkup Pekerjaan Tim QA}
+Tim QA bertugas memastikan aplikasi yang dikembangkan memenuhi kebutuhan klien sebelum diserahkan. Tugas tersebut dilakukan dengan menyusun skrip uji, menjalankan pengujian, melaporkan cacat kepada pengembang, dan memverifikasi perbaikannya. Pekerjaan penulis merupakan bagian dari tugas tim QA tersebut, yaitu pengujian modul-modul aplikasi Komatsu ESS yang ditugaskan oleh pembimbing. Peran penulis dan rekan KP dirangkum pada Tabel~\ref{tab:peran-kp}.
+
+\begin{table}[H]
+\caption{Peran mahasiswa KP pada tim QA proyek Komatsu ESS}
+\label{tab:peran-kp}
+\centering
+\begin{tabularx}{\textwidth}{|p{4.2cm}|p{2.6cm}|X|}
+\hline
+\textbf{Nama} & \textbf{Peran} & \textbf{Tanggung Jawab} \\
+\hline
+Naufarrel Zhafif Abhista (13523149) & \textit{Quality Assurance} & Menyusun skrip uji, menguji, dan melaporkan cacat pada modul yang ditugaskan; pengujian antarmodul dan regresi bersama \\
+\hline
+Zulfaqqar Nayaka Athadiansyah (13523094) & \textit{Quality Assurance} & Menyusun skrip uji, menguji, dan melaporkan cacat pada modul yang ditugaskan; pengujian antarmodul dan regresi bersama \\
+\hline
+\end{tabularx}
+\end{table}
+
+\section{Deskripsi Pekerjaan}
+Pekerjaan penulis dibagi menjadi enam tahap yang berjalan secara berurutan dengan sedikit tumpang tindih, seperti pada Tabel~\ref{tab:tahap-pekerjaan}. Pelaporan cacat dilakukan pada setiap tahap pengujian. Penjelasan setiap tahap dibahas pada Bab III.
+
+\begin{table}[H]
+\caption{Tahapan pekerjaan penulis}
+\label{tab:tahap-pekerjaan}
+\centering
+\begin{tabularx}{\textwidth}{|c|p{3.4cm}|X|}
+\hline
+\textbf{No.} & \textbf{Tahap} & \textbf{Kegiatan} \\
+\hline
+1 & Orientasi & Mempelajari aplikasi, alur bisnis, alat kerja, dan prosedur tim \\
+\hline
+2 & Penyusunan draf skrip uji & Menganalisis kebutuhan fitur dan menyusun skrip uji tiap modul \\
+\hline
+3 & Pengujian per modul & Menjalankan skrip uji pada masing-masing modul dan melaporkan cacat \\
+\hline
+4 & Pengujian antarmodul & Menguji alur yang melibatkan lebih dari satu modul \\
+\hline
+5 & Pengujian regresi & Menjalankan ulang pengujian untuk memverifikasi perbaikan \\
+\hline
+6 & Dokumentasi & Merangkum hasil pengujian dan menyusun laporan KP \\
+\hline
+\end{tabularx}
+\end{table}
+
+\section{Jadwal Kerja}
+Kerja praktik berlangsung selama 13 minggu, dari 22 Juni sampai dengan 22 September 2026. Tabel~\ref{tab:jadwal-kerja} menunjukkan gambaran jadwal kegiatan selama KP. Rincian kegiatan harian dicatat pada \textit{Log Activity} di Lampiran B. Jadwal ini mengikuti rencana pada TOR di Lampiran A.
+
+\begin{table}[H]
+\caption{Gambaran jadwal kegiatan selama KP}
+\label{tab:jadwal-kerja}
+\centering
+\begin{tabularx}{\textwidth}{|p{5cm}|c|X|}
+\hline
+\textbf{Tahap} & \textbf{Minggu} & \textbf{Keterangan} \\
+\hline
+Orientasi & 1--2 & Pengenalan lingkungan kerja dan aplikasi \\
+\hline
+Penyusunan draf skrip uji & 2--5 & Skrip uji per modul \\
+\hline
+Pengujian per modul & 5--9 & Pengujian modul yang ditugaskan \\
+\hline
+Pengujian antarmodul & 8--11 & Pengujian alur lintas modul \\
+\hline
+Pengujian regresi & 11--12 & Verifikasi perbaikan dan pengujian ulang \\
+\hline
+Dokumentasi dan laporan KP & 12--13 & Penyusunan laporan dan penilaian \\
+\hline
+\end{tabularx}
+\end{table}
