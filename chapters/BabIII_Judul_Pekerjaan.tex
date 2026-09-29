@@ -1,74 +1,74 @@
 \chapter{Pengujian Perangkat Lunak Aplikasi Komatsu ESS}
 
-Bab III ini membahas tahapan dan dinamika pelaksanaan pekerjaan penulis sebagai \textit{Quality Assurance} pada proyek Komatsu ESS. Pekerjaan berupa penyelesaian tugas pengujian yang diberikan perusahaan, sehingga pembahasan disusun mengikuti tahapan pekerjaan, mulai dari rencana kerja hingga hasil yang diperoleh. Dinamika kerja, kendala, dan sikap profesional yang dijalani penulis dibahas pada bagian tersendiri.
+Bab ini menceritakan apa yang saya kerjakan sebagai \textit{Quality Assurance} (QA) di proyek Komatsu ESS. Karena pekerjaannya berupa tugas pengujian dari perusahaan, ceritanya saya urutkan mengikuti tahapan kerja, mulai dari rencana kerja sampai hasil akhir. Kendala dan dinamika kerja saya bahas di bagian tersendiri.
 
 \section{Rencana Kerja}
 
 \subsection{Pembahasan Rencana Kerja}
-Pekerjaan diawali dengan pertemuan antara penulis, rekan KP, dan pembimbing di PT Radya Anugrah Digital. Pada pertemuan tersebut pembimbing menjelaskan proyek Komatsu ESS, peran tim QA, dan hal yang diharapkan dari mahasiswa KP. Hasil pertemuan adalah sebagai berikut:
+Di awal KP, saya dan rekan KP bertemu dengan Ibu Alyssa selaku \textit{Project Manager} sekaligus \textit{mentor}. Di pertemuan itu beliau menjelaskan proyek Komatsu ESS, peran tim QA, dan apa yang diharapkan dari kami. Hasilnya:
 \begin{enumerate}[label=\alph*)]
-\item penulis dan rekan KP bekerja sebagai \textit{Quality Assurance} pada proyek Komatsu ESS;
-\item pengujian dilakukan bertahap, yaitu penyusunan draf skrip uji, pengujian per modul, pengujian antarmodul, dan pengujian regresi;
-\item rencana kerja dituangkan dalam TOR dan jadwal pada Lampiran A; dan
-\item kegiatan harian dicatat pada \textit{log activity} dan dilaporkan kepada pembimbing.
+\item saya dan rekan KP bekerja sebagai \textit{Quality Assurance} di proyek Komatsu ESS;
+\item pengujian dilakukan bertahap: menyusun draf \textit{test script}, \textit{module testing}, \textit{integration testing}, lalu \textit{regression testing};
+\item rencana kerja dan jadwal dituangkan dalam TOR di Lampiran A; dan
+\item kegiatan harian dicatat di \textit{log activity} dan dilaporkan ke Ibu Alyssa.
 \end{enumerate}
-\ISI{hasil pertemuan awal yang sebenarnya dan siapa yang hadir, jika berbeda dari uraian di atas}
+\ISI{sesuaikan hasil pertemuan awal dengan yang sebenarnya terjadi}
 
 \subsection{Orientasi Aplikasi dan Lingkungan Kerja}
-Pada dua minggu pertama, penulis mempelajari aplikasi Komatsu ESS, alur bisnis yang didukungnya, serta alat dan prosedur kerja tim. Kegiatan ini penting karena penguji perlu memahami perilaku aplikasi yang benar sebelum dapat menilai apakah suatu hasil menyimpang. \TEKNIS{dokumen yang dipelajari (misalnya spesifikasi kebutuhan dan desain), alat yang diperkenalkan, dan lingkungan uji yang dipakai}
+Dua minggu pertama saya pakai untuk mengenal aplikasi Komatsu ESS, \textit{business flow}-nya, serta alat dan cara kerja tim. Tahap ini penting karena seorang \textit{tester} harus tahu dulu bagaimana aplikasi seharusnya berperilaku sebelum bisa menilai apakah suatu hasil salah. \TEKNIS{dokumen yang dipelajari (misalnya \textit{requirement} dan desain), alat yang diperkenalkan, dan \textit{environment} pengujian yang dipakai}
 
-\section{Penyusunan Draf Skrip Uji}
-Skrip uji (\textit{test script}) adalah panduan tertulis yang memuat langkah pengujian, data masukan, dan hasil yang diharapkan untuk memeriksa satu fungsi aplikasi. Skrip uji menjadi dasar pengujian agar hasilnya dapat diulang dan dibandingkan oleh siapa pun yang menjalankannya. Penulis menyusun draf skrip uji dengan langkah berikut:
+\section{Penyusunan Draf \textit{Test Script}}
+\textit{Test script} adalah panduan tertulis berisi langkah pengujian, data masukan, dan \textit{expected result} untuk satu fungsi aplikasi. Dengan \textit{test script}, pengujian bisa diulang dan hasilnya bisa dibandingkan, siapa pun yang menjalankannya. Saya menyusunnya dengan langkah berikut:
 \begin{enumerate}[label=\arabic*)]
-\item mempelajari kebutuhan dan perilaku fitur pada modul yang ditugaskan;
-\item mengidentifikasi skenario pengujian, baik skenario normal maupun skenario yang tidak normal;
-\item menuliskan langkah, data uji, dan hasil yang diharapkan pada setiap skrip; dan
-\item meminta peninjauan pembimbing lalu memperbaiki skrip berdasarkan masukan.
+\item mempelajari \textit{requirement} dan perilaku fitur di modul yang ditugaskan;
+\item menentukan skenario uji, baik skenario normal maupun yang tidak normal;
+\item menulis langkah, data uji, dan \textit{expected result} di setiap \textit{test script}; dan
+\item meminta \textit{review} dari Ibu Alyssa, lalu memperbaiki \textit{test script} sesuai masukan.
 \end{enumerate}
-\TEKNIS{format dan alat yang dipakai untuk menulis skrip uji, contoh satu skrip uji (disamarkan bila rahasia), dan jumlah skrip yang dihasilkan}
+\TEKNIS{format dan alat yang dipakai untuk menulis \textit{test script}, contoh satu \textit{test script} (samarkan kalau rahasia), dan jumlah \textit{test script} yang dibuat}
 
-Pada tahap ini penulis menemui kesulitan karena sebagian kebutuhan fitur belum tertulis secara rinci. Untuk mengatasinya, penulis bertanya langsung kepada anggota tim yang memahami fitur tersebut dan mencatat jawabannya di skrip uji. \ISI{kendala yang benar-benar dialami pada tahap ini}
+Di tahap ini, kendalanya adalah sebagian \textit{requirement} belum tertulis rinci. Saya mengatasinya dengan bertanya langsung ke anggota tim yang paham fitur tersebut, lalu mencatat jawabannya di \textit{test script}. \ISI{kendala yang benar-benar terjadi di tahap ini}
 
-\section{Pengujian per Modul}
-Pengujian per modul (\textit{module testing}) memeriksa setiap modul secara terpisah untuk memastikan fungsinya berjalan sesuai kebutuhan. Penulis menjalankan skrip uji pada modul yang ditugaskan dan mencatat hasil setiap langkah sebagai lulus atau gagal. Jika hasil aktual berbeda dari hasil yang diharapkan, penulis melaporkan cacat kepada tim pengembang. Laporan cacat memuat langkah reproduksi, hasil yang diharapkan, hasil aktual, tingkat keparahan, dan bukti berupa tangkapan layar atau rekaman. Setelah cacat diperbaiki, penulis memeriksa kembali perbaikannya.
+\section{\textit{Module Testing}}
+\textit{Module testing} memeriksa tiap modul secara terpisah untuk memastikan fungsinya sudah sesuai \textit{requirement}. Saya menjalankan \textit{test script} di modul yang ditugaskan dan mencatat tiap langkah sebagai \textit{pass} atau \textit{fail}. Kalau \textit{actual result} berbeda dari \textit{expected result}, saya membuat \textit{bug report} untuk \textit{developer}. Isinya \textit{steps to reproduce}, \textit{expected result}, \textit{actual result}, \textit{severity}, dan bukti berupa \textit{screenshot} atau rekaman layar. Setelah \textit{bug} diperbaiki, saya cek ulang perbaikannya.
 
-Modul yang diuji penulis dan rekan KP dibagi oleh pembimbing agar pekerjaan tidak tumpang tindih. \TEKNIS{daftar modul yang diuji penulis, jenis pengujian (fungsional, antarmuka, validasi masukan, dll.), alat pelacak cacat, serta contoh cacat yang ditemukan dan tingkat keparahannya}
+Modul yang diuji dibagi oleh Ibu Alyssa antara saya dan rekan KP supaya tidak tumpang tindih. \TEKNIS{daftar modul yang saya uji, jenis pengujiannya (fungsional, UI, validasi \textit{input}, dll.), \textit{bug tracker} yang dipakai, serta contoh \textit{bug} beserta \textit{severity}-nya}
 
-\section{Pengujian Antarmodul}
-Pengujian antarmodul (\textit{integration testing}) memeriksa alur kerja yang melibatkan lebih dari satu modul, misalnya data yang dibuat pada satu modul dan digunakan pada modul lain. Pengujian ini dilakukan setelah pengujian per modul agar cacat di dalam modul tidak mengganggu hasil pengujian interaksi. Pada tahap ini penulis dan rekan KP bekerja bersama karena alur yang diuji sering melibatkan modul dari kedua pihak. \TEKNIS{alur lintas modul yang diuji, cacat interaksi yang ditemukan, dan cara pelaporannya}
+\section{\textit{Integration Testing}}
+\textit{Integration testing} memeriksa alur yang melibatkan lebih dari satu modul, misalnya data yang dibuat di satu modul lalu dipakai di modul lain. Tahap ini dikerjakan setelah \textit{module testing}, supaya \textit{bug} di dalam modul tidak mengacaukan hasil pengujian interaksi antarmodul. Di tahap ini saya dan rekan KP bekerja bersama karena alur yang diuji sering melibatkan modul kami berdua. \TEKNIS{alur lintas modul yang diuji, \textit{bug} interaksi yang ditemukan, dan cara pelaporannya}
 
-\section{Pengujian Regresi}
-Pengujian regresi dilakukan untuk memastikan perbaikan cacat atau perubahan fitur tidak merusak bagian aplikasi yang sebelumnya sudah berfungsi. Penulis menjalankan ulang skrip uji yang relevan pada \textit{build} terbaru dan memverifikasi bahwa cacat yang dilaporkan telah teratasi. Tahap ini berlangsung paling singkat karena skrip uji dan urutan pengujian sudah tersedia dari tahap sebelumnya, sehingga penulis dapat menjalankannya ulang tanpa menyusun ulang dari awal. \TEKNIS{cakupan regresi (semua skrip atau sebagian), jumlah cacat yang lulus verifikasi, dan cacat yang masih terbuka}
+\section{\textit{Regression Testing}}
+\textit{Regression testing} dilakukan untuk memastikan perbaikan \textit{bug} atau perubahan fitur tidak merusak bagian aplikasi yang sebelumnya sudah jalan. Saya menjalankan ulang \textit{test script} yang relevan di \textit{build} terbaru dan memastikan \textit{bug} yang dilaporkan sudah teratasi. Tahap ini paling singkat karena \textit{test script} dan urutan pengujiannya sudah ada dari tahap sebelumnya, jadi tinggal dijalankan ulang. \TEKNIS{cakupan regresi (semua atau sebagian \textit{test script}), jumlah \textit{bug} yang lolos verifikasi, dan \textit{bug} yang masih terbuka}
 
 \section{Dinamika Pekerjaan dan Profesionalisme}
-Selama KP, penulis bekerja setiap hari dengan tim proyek dan berkomunikasi dengan pengembang mengenai cacat yang ditemukan. Beberapa hal yang menjadi dinamika pekerjaan adalah sebagai berikut:
+Selama KP saya bekerja sehari-hari bersama tim proyek dan sering berkomunikasi dengan \textit{developer} soal \textit{bug} yang ditemukan. Beberapa dinamika yang saya alami:
 \begin{enumerate}[label=\arabic*)]
-\item \textbf{Perubahan kebutuhan dan \textit{build}.} Fitur dan \textit{build} aplikasi dapat berubah selama pengujian sehingga skrip uji perlu diperbarui. Penulis menyesuaikan skrip dan memberi tahu pembimbing agar jadwal tetap sesuai.
-\item \textbf{Perbedaan pendapat mengenai cacat.} Sesekali pengembang menilai suatu temuan sebagai perilaku yang memang dirancang. Penulis menyampaikan bukti dan merujuk pada kebutuhan, lalu menyerahkan keputusan akhir kepada pembimbing.
-\item \textbf{Koordinasi dengan rekan KP.} Penulis dan rekan berbagi informasi tentang temuan dan hasil uji agar tidak ada cacat yang dilaporkan ganda.
+\item \textbf{Perubahan \textit{requirement} dan \textit{build}.} Fitur dan \textit{build} bisa berubah di tengah pengujian, sehingga \textit{test script} harus diperbarui. Saya menyesuaikan \textit{test script} dan mengabari Ibu Alyssa supaya jadwal tetap terkendali.
+\item \textbf{Beda pendapat soal \textit{bug}.} Kadang \textit{developer} menilai temuan saya sebagai perilaku yang memang disengaja. Saya menyampaikan bukti dan merujuk ke \textit{requirement}, lalu keputusan akhirnya diserahkan ke Ibu Alyssa.
+\item \textbf{Koordinasi dengan rekan KP.} Saya dan rekan saling berbagi informasi soal temuan dan hasil uji supaya tidak ada \textit{bug} yang dilaporkan dua kali.
 \end{enumerate}
-\ISI{ubah atau ganti butir di atas dengan kejadian dan kendala yang benar-benar dialami}
+\ISI{ganti atau hapus butir di atas sesuai kejadian dan kendala yang benar-benar dialami}
 
-Dalam bekerja, penulis menerapkan sikap profesional, yaitu hadir tepat waktu, mencatat kegiatan harian pada \textit{log activity}, dan menjaga kerahasiaan informasi proyek serta data klien. Penulis juga menyampaikan temuan secara objektif dan sopan, dengan fokus pada perilaku aplikasi, bukan pada pihak yang membuatnya.
+Dalam bekerja, saya berusaha bersikap profesional: hadir tepat waktu, mencatat kegiatan harian di \textit{log activity}, dan menjaga kerahasiaan informasi proyek serta data klien. Saya juga menyampaikan temuan secara objektif dan sopan, dengan fokus pada perilaku aplikasi, bukan pada orang yang membuatnya.
 
 \section{Hasil Pekerjaan}
-Hasil pekerjaan penulis selama KP dirangkum pada Tabel~\ref{tab:hasil-pekerjaan}.
+Hasil pekerjaan saya selama KP dirangkum pada Tabel~\ref{tab:hasil-pekerjaan}.
 
 \begin{table}[H]
-\caption{Hasil pekerjaan penulis}
+\caption{Hasil pekerjaan}
 \label{tab:hasil-pekerjaan}
 \centering
 \begin{tabularx}{\textwidth}{|p{4cm}|X|p{3cm}|}
 \hline
 \textbf{Hasil} & \textbf{Keterangan} & \textbf{Jumlah} \\
 \hline
-Skrip uji & Skrip uji untuk modul yang ditugaskan & \TEKNIS{jumlah} \\
+\textit{Test script} & \textit{Test script} untuk modul yang ditugaskan & \TEKNIS{jumlah} \\
 \hline
-Laporan cacat & Cacat yang ditemukan pada pengujian per modul, antarmodul, dan regresi & \TEKNIS{jumlah} \\
+\textit{Bug report} & \textit{Bug} yang ditemukan di \textit{module}, \textit{integration}, dan \textit{regression testing} & \TEKNIS{jumlah} \\
 \hline
-Laporan hasil pengujian & Ringkasan hasil pengujian per modul, antarmodul, dan regresi & \TEKNIS{jumlah} \\
+Laporan hasil pengujian & Ringkasan hasil \textit{module}, \textit{integration}, dan \textit{regression testing} & \TEKNIS{jumlah} \\
 \hline
 \end{tabularx}
 \end{table}
 
-Skrip uji dan laporan cacat tersebut digunakan tim pengembang untuk memperbaiki aplikasi sehingga kualitas Komatsu ESS meningkat sebelum diserahkan kepada klien. \TEKNIS{kondisi akhir: apakah seluruh cacat berat sudah tertangani, dan pekerjaan yang belum selesai}
+\textit{Test script} dan \textit{bug report} tersebut dipakai \textit{developer} untuk memperbaiki aplikasi, sehingga kualitas Komatsu ESS meningkat sebelum diserahkan ke klien. \TEKNIS{kondisi akhir: apakah semua \textit{bug} berat sudah tertangani, dan pekerjaan yang belum selesai}

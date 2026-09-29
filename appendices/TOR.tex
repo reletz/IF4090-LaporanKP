@@ -14,18 +14,18 @@ PT Radya Anugrah Digital
 
 \item \textbf{TUJUAN PEKERJAAN}
 
-PT Radya Anugrah Digital (Radyalabs) mengembangkan aplikasi Komatsu ESS untuk klien, yaitu Komatsu. Agar aplikasi tersebut berfungsi sesuai kebutuhan klien dan bebas dari cacat yang berarti sebelum diserahkan, diperlukan kegiatan pengujian yang terencana. Tujuan pekerjaan ini adalah memastikan kualitas aplikasi Komatsu ESS melalui kegiatan \textit{Quality Assurance} (QA), yaitu penyusunan skrip uji, pengujian per modul, pengujian antarmodul, dan pengujian regresi, disertai pelaporan cacat (\textit{bug}). Pekerjaan ini dilaksanakan oleh dua mahasiswa KP yang sama-sama berperan sebagai \textit{Quality Assurance}. Hasil pekerjaan diperuntukkan bagi tim pengembang Radyalabs dan, melalui tim tersebut, bagi Komatsu sebagai pengguna akhir.
+PT Radya Anugrah Digital (Radyalabs) mengembangkan aplikasi Komatsu ESS untuk klien, yaitu Komatsu. Agar aplikasi tersebut berfungsi sesuai kebutuhan klien dan bebas dari \textit{bug} yang berarti sebelum diserahkan, diperlukan kegiatan pengujian yang terencana. Tujuan pekerjaan ini adalah memastikan kualitas aplikasi Komatsu ESS melalui kegiatan \textit{Quality Assurance} (QA), yaitu penyusunan \textit{test script}, \textit{module testing}, \textit{integration testing}, dan \textit{regression testing}, disertai pelaporan \textit{bug} . Pekerjaan ini dilaksanakan oleh dua mahasiswa KP yang sama-sama berperan sebagai \textit{Quality Assurance}. Hasil pekerjaan diperuntukkan bagi tim \textit{developer} Radyalabs dan, melalui tim tersebut, bagi Komatsu sebagai pengguna akhir.
 
 \item \textbf{LINGKUP PEKERJAAN}
 
 Lingkup pekerjaan tim QA pada proyek Komatsu ESS mencakup:
 \begin{enumerate}[label=\arabic*)]
 \item analisis kebutuhan dan spesifikasi fitur sebagai dasar pengujian;
-\item penyusunan draf skrip uji (\textit{test script});
-\item pengujian per modul (\textit{module testing});
-\item pengujian antarmodul (\textit{integration testing});
-\item pengujian regresi setelah perbaikan atau perubahan fitur;
-\item pelaporan dan pelacakan cacat hingga tuntas; dan
+\item penyusunan draf \textit{test script};
+\item \textit{module testing};
+\item \textit{integration testing};
+\item \textit{regression testing} setelah perbaikan atau perubahan fitur;
+\item pelaporan dan \textit{bug tracking} hingga tuntas; dan
 \item pendokumentasian hasil pengujian.
 \end{enumerate}
 Bagian yang dikerjakan mahasiswa KP adalah pengujian modul-modul yang ditugaskan oleh pembimbing kepada masing-masing mahasiswa, dengan rincian yang ditetapkan pembimbing selama KP berlangsung.
@@ -34,17 +34,17 @@ Bagian yang dikerjakan mahasiswa KP adalah pengujian modul-modul yang ditugaskan
 
 Hasil pekerjaan yang diharapkan adalah:
 \begin{enumerate}[label=\arabic*)]
-\item skrip uji untuk modul yang ditugaskan;
-\item laporan cacat yang memuat langkah reproduksi, hasil yang diharapkan, hasil aktual, tingkat keparahan, dan bukti (\textit{screenshot} atau rekaman);
-\item laporan hasil pengujian per modul, antarmodul, dan regresi; dan
-\item aplikasi Komatsu ESS yang kualitasnya meningkat karena cacat yang ditemukan telah diperbaiki oleh tim pengembang.
+\item \textit{test script} untuk modul yang ditugaskan;
+\item \textit{bug report} yang memuat \textit{steps to reproduce}, \textit{expected result}, \textit{actual result}, \textit{severity}, dan bukti (\textit{screenshot} atau rekaman);
+\item laporan hasil \textit{module testing}, antarmodul, dan regresi; dan
+\item aplikasi Komatsu ESS yang kualitasnya meningkat karena \textit{bug} yang ditemukan telah diperbaiki oleh tim \textit{developer}.
 \end{enumerate}
 
 \item \textbf{BATASAN}
 
 \begin{enumerate}[label=\arabic*)]
-\item Pekerjaan mahasiswa dibatasi pada kegiatan pengujian. Perbaikan cacat pada kode sumber menjadi tanggung jawab tim pengembang.
-\item Pengujian dilakukan pada lingkungan pengujian (\textit{staging}) dan bukan pada lingkungan produksi milik klien.
+\item Pekerjaan mahasiswa dibatasi pada kegiatan pengujian. Perbaikan \textit{bug} pada \textit{source code} menjadi tanggung jawab tim \textit{developer}.
+\item Pengujian dilakukan pada lingkungan \textit{staging} dan bukan pada lingkungan produksi milik klien.
 \item Mahasiswa hanya mengakses fitur, data, dan dokumen proyek sesuai izin yang diberikan pembimbing.
 \item Seluruh informasi proyek dan data klien bersifat rahasia dan tidak boleh disebarluaskan. Isi laporan KP yang memuat informasi proyek harus mendapat persetujuan pembimbing.
 \item Spesifikasi perangkat yang digunakan mengikuti ketentuan pada butir Lingkungan Pengembangan.
@@ -55,15 +55,15 @@ Hasil pekerjaan yang diharapkan adalah:
 \begin{enumerate}[label=\arabic*)]
 \item Dokumen kebutuhan atau spesifikasi fitur tersedia dan dapat diakses oleh mahasiswa.
 \item Lingkungan pengujian, akun uji, dan data uji disediakan oleh perusahaan.
-\item Build aplikasi yang akan diuji tersedia sesuai jadwal rilis tim pengembang.
-\item Pembimbing dan tim pengembang tersedia untuk klarifikasi kebutuhan dan pembahasan cacat.
+\item \textit{Build} aplikasi yang akan diuji tersedia sesuai jadwal rilis tim \textit{developer}.
+\item Pembimbing dan tim \textit{developer} tersedia untuk klarifikasi kebutuhan dan pembahasan \textit{bug}.
 \item Ketergantungan pada jadwal pengembangan dan perubahan kebutuhan dari klien dapat menggeser jadwal pengujian.
 \end{enumerate}
 
 \Needspace{10\baselineskip}
 \item \textbf{METODOLOGI PEKERJAAN}
 
-Pekerjaan dilaksanakan dengan siklus pengujian perangkat lunak yang berjalan beriringan dengan iterasi pengembangan aplikasi. Pengujian dilakukan secara bertahap dari cakupan kecil ke cakupan luas, yaitu dari modul, lalu antarmodul, lalu regresi. Tahapan tersebut dipetakan pada Tabel~A.1. Pelaporan cacat dilakukan di setiap tahap pengujian.
+Pekerjaan dilaksanakan dengan siklus pengujian perangkat lunak yang berjalan beriringan dengan iterasi pengembangan aplikasi. Pengujian dilakukan secara bertahap dari cakupan kecil ke cakupan luas, yaitu dari modul, lalu antarmodul, lalu regresi. Tahapan tersebut dipetakan pada Tabel~A.1. Pe\textit{bug report} dilakukan di setiap tahap pengujian.
 
 \begin{center}
 \textbf{Tabel A.1} Pemetaan metodologi ke dalam tahapan pekerjaan\\[4pt]
@@ -74,13 +74,13 @@ Pekerjaan dilaksanakan dengan siklus pengujian perangkat lunak yang berjalan ber
 \hline
 1 & Orientasi & Mempelajari aplikasi, alur bisnis, alat kerja, dan prosedur tim & Pemahaman sistem \\
 \hline
-2 & Penyusunan draf skrip uji & Menganalisis kebutuhan fitur dan menyusun skrip uji tiap modul & Skrip uji \\
+2 & Penyusunan draf \textit{test script} & Menganalisis \textit{requirement} fitur dan menyusun \textit{test script} tiap modul & \textit{Test script} \\
 \hline
-3 & Pengujian per modul & Menjalankan skrip uji pada masing-masing modul dan melaporkan cacat & Hasil uji modul dan laporan cacat \\
+3 & \textit{Module testing} & Menjalankan \textit{test script} pada masing-masing modul dan melaporkan \textit{bug} & Hasil uji modul dan \textit{bug report} \\
 \hline
-4 & Pengujian antarmodul & Menguji alur yang melibatkan lebih dari satu modul dan interaksi antarmodul & Hasil uji antarmodul dan laporan cacat \\
+4 & \textit{Integration testing} & Menguji alur yang melibatkan lebih dari satu modul dan interaksi antarmodul & Hasil uji antarmodul dan \textit{bug report} \\
 \hline
-5 & Pengujian regresi & Menjalankan ulang pengujian untuk memverifikasi perbaikan dan memastikan fitur lain tidak terdampak & Hasil verifikasi \\
+5 & \textit{Regression testing} & Menjalankan ulang pengujian untuk memverifikasi perbaikan dan memastikan fitur lain tidak terdampak & Hasil verifikasi \\
 \hline
 6 & Dokumentasi & Merangkum hasil pengujian dan menyusun laporan KP & Laporan hasil uji dan laporan KP \\
 \hline
@@ -91,7 +91,7 @@ Pekerjaan dilaksanakan dengan siklus pengujian perangkat lunak yang berjalan ber
 
 \begin{enumerate}[label=\arabic*)]
 \item Perangkat keras: komputer atau laptop kerja dan perangkat uji (\textit{smartphone}) sesuai kebutuhan pengujian.
-\item Perangkat lunak: aplikasi Komatsu ESS pada lingkungan \textit{staging}, peramban web, alat pelacak cacat dan manajemen tugas yang digunakan tim, alat dokumentasi kasus uji, serta alat komunikasi tim.
+\item Perangkat lunak: aplikasi Komatsu ESS pada lingkungan \textit{staging}, peramban web, \textit{bug tracker} dan alat manajemen tugas yang digunakan tim, alat dokumentasi \textit{test case}, serta alat komunikasi tim.
 \end{enumerate}
 Rincian versi dan alat mengikuti yang digunakan oleh tim proyek.
 
@@ -111,10 +111,10 @@ Kerja praktik dilaksanakan pada 22 Juni 2026 sampai dengan 22 September 2026 (13
 % baris tahap: nama, awal, akhir
 \foreach \name/\a/\b [count=\r from 1] in {%
   Orientasi/1/2,%
-  Penyusunan draf skrip uji/2/5,%
-  Pengujian per modul/5/9,%
-  Pengujian antarmodul/8/11,%
-  Pengujian regresi/11/12,%
+  Penyusunan draf \textit{test script}/2/5,%
+  \textit{Module testing}/5/9,%
+  \textit{Integration testing}/8/11,%
+  \textit{Regression testing}/11/12,%
   Dokumentasi dan laporan KP/12/13}{
   \node[anchor=west] at (-\labw,-\r+0.5) {\name};
   \fill[black!65] (\a-1+0.05,-\r+0.15) rectangle (\b-0.05,-\r+0.85);
@@ -129,7 +129,7 @@ Kerja praktik dilaksanakan pada 22 Juni 2026 sampai dengan 22 September 2026 (13
 
 \item \textbf{PENUGASAN STAF}
 
-Pekerjaan dilakukan oleh dua mahasiswa dengan peran yang sama, yaitu \textit{Quality Assurance}, di bawah arahan pembimbing instansi. Seluruh tahapan pada butir Metodologi Pekerjaan dijalani oleh kedua mahasiswa. Perbedaannya terletak pada modul yang diuji, yang dibagi oleh pembimbing dan dibagi secara merata di antara keduanya. Pengujian antarmodul dilakukan bersama untuk alur yang melibatkan modul dari kedua mahasiswa.
+Pekerjaan dilakukan oleh dua mahasiswa dengan peran yang sama, yaitu \textit{Quality Assurance}, di bawah arahan pembimbing instansi. Seluruh tahapan pada butir Metodologi Pekerjaan dijalani oleh kedua mahasiswa. Perbedaannya terletak pada modul yang diuji, yang dibagi oleh pembimbing dan dibagi secara merata di antara keduanya. \textit{Integration testing} dilakukan bersama untuk alur yang melibatkan modul dari kedua mahasiswa.
 
 \begin{center}
 \small
@@ -137,9 +137,9 @@ Pekerjaan dilakukan oleh dua mahasiswa dengan peran yang sama, yaitu \textit{Qua
 \hline
 \textbf{Nama} & \textbf{Peran} & \textbf{Tanggung Jawab} \\
 \hline
-Naufarrel Zhafif Abhista (13523149) & \textit{Quality Assurance} & Menyusun skrip uji, menguji, dan melaporkan cacat pada modul yang ditugaskan; pengujian antarmodul dan regresi bersama \\
+Naufarrel Zhafif Abhista (13523149) & \textit{Quality Assurance} & Menyusun \textit{test script}, menguji, dan melaporkan \textit{bug} pada modul yang ditugaskan; \textit{integration testing} dan regresi bersama \\
 \hline
-Zulfaqqar Nayaka Athadiansyah (13523094) & \textit{Quality Assurance} & Menyusun skrip uji, menguji, dan melaporkan cacat pada modul yang ditugaskan; pengujian antarmodul dan regresi bersama \\
+Zulfaqqar Nayaka Athadiansyah (13523094) & \textit{Quality Assurance} & Menyusun \textit{test script}, menguji, dan melaporkan \textit{bug} pada modul yang ditugaskan; \textit{integration testing} dan regresi bersama \\
 \hline
 \end{tabularx}
 \end{center}
@@ -150,7 +150,7 @@ Zulfaqqar Nayaka Athadiansyah (13523094) & \textit{Quality Assurance} & Menyusun
 \begin{enumerate}[label=\arabic*)]
 \item Setiap mahasiswa mencatat kegiatan hariannya pada \textit{log activity} masing-masing dan menyampaikannya kepada pembimbing.
 \item Kemajuan pengujian dilaporkan secara lisan kepada pembimbing dan tim proyek melalui pertemuan rutin, dari mahasiswa kepada pembimbing instansi.
-\item Cacat dilaporkan melalui alat pelacak cacat yang digunakan tim dan dibahas bersama tim pengembang.
+\item \textit{Bug} dilaporkan melalui \textit{bug tracker} yang digunakan tim dan dibahas bersama tim \textit{developer}.
 \item Pembimbing instansi memberikan umpan balik dan penilaian akhir pada akhir KP.
 \end{enumerate}
 
@@ -163,13 +163,13 @@ Tonggak (\textit{milestone}) pekerjaan ditunjukkan pada Tabel~A.2.
 \hline
 \textbf{No.} & \textbf{Milestone} & \textbf{Perkiraan Waktu} \\
 \hline
-1 & Orientasi selesai dan penyusunan skrip uji dimulai & Minggu 2 \\
+1 & Orientasi selesai dan penyusunan \textit{test script} dimulai & Minggu 2 \\
 \hline
-2 & Draf skrip uji selesai dan pengujian per modul dimulai & Minggu 5 \\
+2 & Draf \textit{test script} selesai dan \textit{module testing} dimulai & Minggu 5 \\
 \hline
-3 & Pengujian antarmodul dimulai & Minggu 8 \\
+3 & \textit{Integration testing} dimulai & Minggu 8 \\
 \hline
-4 & Pengujian regresi dimulai & Minggu 11 \\
+4 & \textit{Regression testing} dimulai & Minggu 11 \\
 \hline
 5 & Seluruh pengujian selesai dan draf laporan KP diserahkan kepada pembimbing & Minggu 12 \\
 \hline
@@ -187,11 +187,11 @@ Tonggak (\textit{milestone}) pekerjaan ditunjukkan pada Tabel~A.2.
 \hline
 \textbf{Risiko} & \textbf{Prioritas} & \textbf{Pengendalian} \\
 \hline
-Perubahan kebutuhan dari klien & Tinggi & Memperbarui skrip uji dan berkoordinasi dengan pembimbing \\
+Perubahan \textit{requirement} dari klien & Tinggi & Memperbarui \textit{test script} dan berkoordinasi dengan pembimbing \\
 \hline
-\textit{Build} terlambat atau tidak stabil & Tinggi & Menyesuaikan urutan pengujian dan mengerjakan skrip uji atau dokumentasi terlebih dahulu \\
+\textit{Build} terlambat atau tidak stabil & Tinggi & Menyesuaikan urutan pengujian dan mengerjakan \textit{test script} atau dokumentasi terlebih dahulu \\
 \hline
-Lingkungan atau data uji tidak tersedia & Sedang & Meminta dukungan tim pengembang lebih awal \\
+Lingkungan atau data uji tidak tersedia & Sedang & Meminta dukungan tim \textit{developer} lebih awal \\
 \hline
 Pemahaman domain bisnis kurang & Sedang & Bertanya kepada pembimbing dan mempelajari dokumen proyek \\
 \hline

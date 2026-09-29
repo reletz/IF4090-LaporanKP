@@ -16,18 +16,18 @@
 \contentsline {chapter}{\numberline {3}Pengujian Perangkat Lunak Aplikasi Komatsu ESS}{6}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Rencana Kerja}{6}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Pembahasan Rencana Kerja}{6}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Orientasi Aplikasi dan Lingkungan Kerja}{7}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Penyusunan Draf Skrip Uji}{7}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Pengujian per Modul}{8}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Pengujian Antarmodul}{8}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Pengujian Regresi}{8}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Dinamika Pekerjaan dan Profesionalisme}{9}{section.3.6}%
+\contentsline {subsection}{\numberline {3.1.2}Orientasi Aplikasi dan Lingkungan Kerja}{6}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Penyusunan Draf \textit {Test Script}}{7}{section.3.2}%
+\contentsline {section}{\numberline {3.3}\textit {Module Testing}}{7}{section.3.3}%
+\contentsline {section}{\numberline {3.4}\textit {Integration Testing}}{8}{section.3.4}%
+\contentsline {section}{\numberline {3.5}\textit {Regression Testing}}{8}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Dinamika Pekerjaan dan Profesionalisme}{8}{section.3.6}%
 \contentsline {section}{\numberline {3.7}Hasil Pekerjaan}{9}{section.3.7}%
-\contentsline {chapter}{\numberline {4}Rangkuman}{11}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Rangkuman Pelaksanaan Pekerjaan}{11}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Rangkuman Hasil Pekerjaan}{11}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Evaluasi Diri}{11}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Ucapan Terima Kasih}{12}{section.4.4}%
-\contentsline {chapter}{Referensi}{13}{chapter*.6}%
-\contentsline {chapter}{Lampiran A. \textit {Term of References} (TOR)}{14}{chapter*.6}%
-\contentsline {chapter}{Lampiran B. \textit {Log Activity}}{20}{chapter*.7}%
+\contentsline {chapter}{\numberline {4}Rangkuman}{10}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Rangkuman Pelaksanaan Pekerjaan}{10}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Rangkuman Hasil Pekerjaan}{10}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Evaluasi Diri}{10}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Ucapan Terima Kasih}{11}{section.4.4}%
+\contentsline {chapter}{Referensi}{12}{chapter*.6}%
+\contentsline {chapter}{Lampiran A. \textit {Term of References} (TOR)}{13}{chapter*.6}%
+\contentsline {chapter}{Lampiran B. \textit {Log Activity}}{19}{chapter*.7}%

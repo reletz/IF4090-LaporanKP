@@ -1,28 +1,28 @@
 \chapter{Pendahuluan}
 
 \section{Latar Belakang}
-PT Radya Anugrah Digital (Radya Digital), yang sebelumnya dikenal sebagai Radya Labs, adalah perusahaan pengembang perangkat lunak yang berdiri di Bandung pada 2011. Perusahaan ini didirikan oleh empat alumni Teknik Informatika Institut Teknologi Bandung\label{ist:itb} (ITB) dan menjadi bagian dari Radya Group (Radya Labs 2023). Layanan perusahaan meliputi solusi \textit{mobile workforce}, sistem manajemen pembelajaran, \textit{e-commerce}, dan \textit{chatbot}, dengan klien dari pemerintah, perusahaan multinasional, hingga usaha kecil dan menengah. Perusahaan memiliki visi membantu organisasi bertransformasi secara digital melalui perangkat lunak yang andal.
+PT Radya Anugrah Digital (Radya Digital), yang dulu bernama Radya Labs, adalah perusahaan pengembang perangkat lunak yang berdiri di Bandung pada 2011. Perusahaan ini didirikan oleh empat alumni Teknik Informatika Institut Teknologi Bandung\label{ist:itb} (ITB) dan menjadi bagian dari Radya Group (Radya Labs 2023). Layanannya mencakup solusi \textit{mobile workforce}, \textit{learning management system}, \textit{e-commerce}, dan \textit{chatbot}, dengan klien mulai dari pemerintah, perusahaan multinasional, sampai usaha kecil dan menengah. Perusahaan ini ingin membantu organisasi bertransformasi secara digital lewat perangkat lunak yang andal.
 
-Salah satu klien Radya Digital adalah Komatsu, produsen alat berat. Radya Digital mengembangkan aplikasi Komatsu ESS\label{ist:ess} untuk klien tersebut. \TEKNIS{jelaskan secara singkat fungsi aplikasi Komatsu ESS, kepanjangan ESS, dan siapa penggunanya} Aplikasi yang dipakai dalam kegiatan operasional klien harus berfungsi sesuai kebutuhan dan bebas dari cacat yang berarti. Karena itu, pengembangan aplikasi perlu disertai kegiatan jaminan kualitas atau \textit{Quality Assurance}\label{ist:qa} (QA) yang menguji aplikasi sebelum diserahkan kepada klien.
+Salah satu klien Radya Digital adalah Komatsu, produsen alat berat. Radya Digital mengembangkan aplikasi Komatsu ESS\label{ist:ess} untuk klien tersebut. \TEKNIS{jelaskan singkat fungsi aplikasi Komatsu ESS, kepanjangan ESS, dan siapa penggunanya} Aplikasi yang dipakai untuk operasional klien harus berjalan sesuai \textit{requirement} dan bebas dari \textit{bug} yang berarti. Karena itu, pengembangannya perlu disertai kegiatan \textit{Quality Assurance}\label{ist:qa} (QA) yang menguji aplikasi sebelum diserahkan ke klien.
 
-Kerja praktik\label{ist:kp} (KP) ini dilaksanakan penulis sebagai bagian dari tim QA pada proyek Komatsu ESS, bersama seorang rekan sesama mahasiswa Program Studi Teknik Informatika ITB. Penulis dan rekan tersebut menyusun skrip uji, menguji aplikasi, dan melaporkan cacat yang ditemukan kepada tim pengembang.
+Saya melaksanakan kerja praktik\label{ist:kp} (KP) sebagai bagian dari tim QA di proyek Komatsu ESS, bersama seorang rekan sesama mahasiswa Teknik Informatika ITB. Kami menyusun \textit{test script}, menguji aplikasi, dan melaporkan \textit{bug} yang ditemukan ke \textit{developer}.
 
 \section{Tempat dan Waktu Pelaksanaan}
-Kerja praktik dilaksanakan di kantor PT Radya Anugrah Digital yang beralamat di Jl. Karawitan No. 105A, Turangga, Kecamatan Lengkong, Kota Bandung 40264. Pelaksanaan berlangsung selama 13 minggu, yaitu pada 22 Juni 2026 sampai dengan 22 September 2026. \ISI{cara kerja: di kantor, jarak jauh, atau campuran; jam kerja; dan apakah ada kunjungan ke lokasi klien}
+KP dilaksanakan di kantor PT Radya Anugrah Digital, Jl. Karawitan No. 105A, Turangga, Kecamatan Lengkong, Kota Bandung 40264. Waktu pelaksanaannya 13 minggu, yaitu 22 Juni sampai 22 September 2026. \ISI{cara kerja: di kantor, jarak jauh, atau campuran; jam kerja; dan apakah ada kunjungan ke lokasi klien}
 
 \section{Ruang Lingkup Pekerjaan}
-Ruang lingkup pekerjaan penulis di tempat KP adalah pengujian perangkat lunak aplikasi Komatsu ESS sebagai \textit{Quality Assurance}. Pekerjaan mencakup penyusunan draf skrip uji, pengujian per modul, pengujian antarmodul, pengujian regresi, serta pelaporan cacat pada setiap tahap. Perbaikan cacat pada kode sumber bukan bagian dari pekerjaan penulis dan menjadi tanggung jawab tim pengembang. Rincian lingkup, hasil, batasan, dan jadwal disepakati bersama pembimbing dalam \textit{Term of References}\label{ist:tor} (TOR) pada Lampiran A. Deskripsi pekerjaan secara lengkap disajikan pada Bab III.
+Pekerjaan saya di tempat KP adalah menguji aplikasi Komatsu ESS sebagai \textit{Quality Assurance}. Cakupannya penyusunan draf \textit{test script}, \textit{module testing}, \textit{integration testing}, \textit{regression testing}, dan pelaporan \textit{bug} di setiap tahap. Memperbaiki \textit{bug} di \textit{source code} bukan tugas saya, karena itu tanggung jawab \textit{developer}. Rincian lingkup, hasil, batasan, dan jadwal sudah disepakati bersama pembimbing dalam \textit{Term of References}\label{ist:tor} (TOR) di Lampiran A. Penjelasan lengkap pekerjaannya ada di Bab III.
 
 \section{Sistematika Penulisan}
-Laporan ini disusun dengan sistematika sebagai berikut:
+Laporan ini disusun dengan sistematika berikut:
 
 \begin{enumerate}[label=\arabic*)]
 \item Bab I Pendahuluan\\
-Bab ini berisi latar belakang, tempat dan waktu pelaksanaan, ruang lingkup pekerjaan, dan sistematika penulisan laporan.
+Berisi latar belakang, tempat dan waktu pelaksanaan, ruang lingkup pekerjaan, dan sistematika penulisan.
 \item Bab II Organisasi atau Lingkungan Kerja Praktik\\
-Bab ini berisi struktur organisasi, unit kerja tempat penulis bekerja, deskripsi pekerjaan, dan jadwal kerja.
+Berisi struktur organisasi, unit kerja tempat saya bekerja, deskripsi pekerjaan, dan jadwal kerja.
 \item Bab III Pengujian Perangkat Lunak Aplikasi Komatsu ESS\\
-Bab ini berisi rencana kerja, tahapan pengujian yang dilakukan, dinamika pekerjaan, dan hasil pekerjaan.
+Berisi rencana kerja, tahapan pengujian, dinamika pekerjaan, dan hasil pekerjaan.
 \item Bab IV Rangkuman\\
-Bab ini berisi rangkuman pelaksanaan dan hasil pekerjaan, evaluasi diri, dan ucapan terima kasih.
+Berisi rangkuman pelaksanaan dan hasil pekerjaan, evaluasi diri, dan ucapan terima kasih.
 \end{enumerate}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.9.29)  29 SEP 2026 15:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.9.29)  29 SEP 2026 15:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -945,17 +945,17 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has be
 <to be read again> 
                    \relax 
 l.24 \end{titlepage}
-                     [1]) (./frontmatter/Abstrak.tex) (./frontmatter/Kata_Pengantar.tex [1
+                     [1]) (./frontmatter/Abstrak.tex
+LaTeX Font Info:    Font shape `OT1/ntxtlf/b/it' will be
+(Font)              scaled to size 12.0pt on input line 13.
+) (./frontmatter/Kata_Pengantar.tex [1
 
 
 ]) [2
 
 ] (build/main.toc [3
 
-]
-LaTeX Font Info:    Font shape `OT1/ntxtlf/b/it' will be
-(Font)              scaled to size 12.0pt on input line 32.
-)
+])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
@@ -1010,23 +1010,18 @@ Underfull \hbox (badness 1997) in paragraph at lines 96--96
 Bab 3.
 [6
 
-] [7] [8]
-Underfull \hbox (badness 1221) in paragraph at lines 71--71
-[]|\OT1/minntx/m/n/12 Ringkasan ha-sil pe-ngu-ji-an per
- []
-
-[9]) (./chapters/BabIV_Rangkuman.tex [10]
+] [7] [8]) (./chapters/BabIV_Rangkuman.tex [9]
 Bab 4.
-[11
+[10
 
-]) (./backmatter/Referensi.tex [12]
+]) (./backmatter/Referensi.tex [11]
 LaTeX Font Info:    Trying to load font information for OT1+ntxtt on input line 5.
  (/usr/share/texmf-dist/tex/latex/newtx/ot1ntxtt.fd
 File: ot1ntxtt.fd 2012/04/20 v3.1
 )
 LaTeX Font Info:    Font shape `OT1/ntxtt/m/n' will be
 (Font)              scaled to size 12.0pt on input line 5.
-) (./appendices/TOR.tex [13
+) (./appendices/TOR.tex [12
 
 
 ]
@@ -1038,14 +1033,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--87
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--87
-[]|\OT1/minntx/m/n/10.95 Pengujian an-tar-
+Underfull \hbox (badness 7595) in paragraph at lines 87--87
+[]|\OT1/minntx/m/n/10.95 Menganalisis \OT1/ntxtlf/m/it/10.95 re-qu-i-re-ment
+ []
+
+
+Underfull \hbox (badness 3281) in paragraph at lines 87--87
+\OT1/minntx/m/n/10.95 fi-tur dan me-nyu-sun \OT1/ntxtlf/m/it/10.95 test
  []
 
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 (Font)              scaled to size 8.0pt on input line 109.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 (Font)              scaled to size 8.0pt on input line 110.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/it' will be
+(Font)              scaled to size 8.0pt on input line 121.
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
 []|\OT1/minntx/m/n/10.95 Zulfaqqar Na-ya-
@@ -1057,50 +1059,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 144--144
  []
 
 
-Underfull \hbox (badness 5105) in paragraph at lines 198--198
-[]|\OT1/minntx/m/n/10.95 Perubahan ke-bu-tuh-an
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 198--198
 []|\OT1/minntx/m/n/10.95 Pemahaman do-ma-in
  []
 
-[14
+[13
 
-] [15] [16] [17] [18] [19]
+] [14] [15] [16] [17] [18]) (./appendices/Log_Activity.tex
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/it' will be
-(Font)              scaled to size 17.28pt on input line 245.
+(Font)              scaled to size 17.28pt on input line 2.
 
-Underfull \hbox (badness 1552) in paragraph at lines 278--278
+Underfull \hbox (badness 1552) in paragraph at lines 35--35
 []|\OT1/minntx/m/n/10.95 31 Agustus--6 Sep-
  []
 
 
-ignored: Infinite glue shrinkage found in box being split [20
+ignored: Infinite glue shrinkage found in box being split [19
 
 
-]) [21] (build/main.aux)
+
+]) [20] (build/main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 2F2D2D6EA35A06BBD2FA2F6F69D01CB1;5412.
+(rerunfilecheck)             Checksum: FE049849A23ACEA8E2415EDCDB0CFE11;5394.
  ) 
 Here is how much of TeX's memory you used:
- 28209 strings out of 468995
- 498811 string characters out of 5460435
- 909127 words of memory out of 5000000
- 56345 multiletter control sequences out of 15000+600000
- 675591 words of font info for 129 fonts, out of 8000000 for 9000
+ 28219 strings out of 468995
+ 499092 string characters out of 5460435
+ 909110 words of memory out of 5000000
+ 56351 multiletter control sequences out of 15000+600000
+ 677412 words of font info for 132 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
- 84i,10n,117p,1294b,856s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,10n,117p,1336b,869s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/txfonts/txtt.pfb></usr/share/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/share/texmf-dist/fonts/type1/public/newtx/ztmbi.pfb></usr/share/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/share/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on build/main.pdf (32 pages, 256432 bytes).
+Output written on build/main.pdf (31 pages, 258355 bytes).
 PDF statistics:
- 453 PDF objects out of 1000 (max. 8388607)
- 402 compressed objects within 5 object streams
- 132 named destinations out of 1000 (max. 500000)
+ 448 PDF objects out of 1000 (max. 8388607)
+ 399 compressed objects within 4 object streams
+ 131 named destinations out of 1000 (max. 500000)
  274 words of extra memory for PDF output out of 10000 (max. 10000000)
 
