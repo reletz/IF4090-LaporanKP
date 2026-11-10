@@ -25,20 +25,42 @@ Dua minggu pertama saya pakai untuk mengenal aplikasi Komatsu ESS, \textit{busin
 \item menulis langkah, data uji, dan \textit{expected result} di setiap \textit{test script}; dan
 \item meminta \textit{review} dari Ibu Alyssa, lalu memperbaiki \textit{test script} sesuai masukan.
 \end{enumerate}
-\TEKNIS{format dan alat yang dipakai untuk menulis \textit{test script}, contoh satu \textit{test script} (samarkan kalau rahasia), dan jumlah \textit{test script} yang dibuat}
+Saya menulis \textit{test script} di Google Sheets dengan kolom Fitur, Sub Menu, ID Case, Skenario Pengujian, Precondition, Step Details, Expected Result, Actual Result, Status (P/F), Type, ENV Issue, Status Dev \& QA, Report BC, Tester, Evidence, dan Due Date. Contoh satu \textit{test script} (disederhanakan) adalah sebagai berikut:
+\begin{itemize}
+\item ID Case: TC-JRV-013
+\item Skenario Pengujian: pencarian dengan nama RECEIVED FROM
+\item Precondition: halaman Journal Receive Voucher List sudah terbuka
+\item Step Details: isi field \textit{General Search} dengan nama, lalu amati hasil tabel
+\item Expected Result: tabel hanya menampilkan baris dengan RECEIVED FROM yang sesuai
+\item Actual Result: hasil kosong (\textit{FAILED}, Type: BUG)
+\end{itemize}
+Jumlah \textit{test script} yang saya susun untuk modul yang saya uji sebanyak 154 kasus uji.
 
 Di tahap ini, kendalanya adalah sebagian \textit{requirement} belum tertulis rinci. Saya mengatasinya dengan bertanya langsung ke anggota tim yang paham fitur tersebut, lalu mencatat jawabannya di \textit{test script}. \ISI{kendala yang benar-benar terjadi di tahap ini}
 
 \section{\textit{Module Testing}}
 \textit{Module testing} memeriksa tiap modul secara terpisah untuk memastikan fungsinya sudah sesuai \textit{requirement}. Saya menjalankan \textit{test script} di modul yang ditugaskan dan mencatat tiap langkah sebagai \textit{pass} atau \textit{fail}. Kalau \textit{actual result} berbeda dari \textit{expected result}, saya membuat \textit{bug report} untuk \textit{developer}. Isinya \textit{steps to reproduce}, \textit{expected result}, \textit{actual result}, \textit{severity}, dan bukti berupa \textit{screenshot} atau rekaman layar. Setelah \textit{bug} diperbaiki, saya cek ulang perbaikannya.
 
-Modul yang diuji dibagi oleh Ibu Alyssa antara saya dan rekan KP supaya tidak tumpang tindih. \TEKNIS{daftar modul yang saya uji, jenis pengujiannya (fungsional, UI, validasi \textit{input}, dll.), \textit{bug tracker} yang dipakai, serta contoh \textit{bug} beserta \textit{severity}-nya}
+Modul yang diuji dibagi oleh Ibu Alyssa antara saya dan rekan KP supaya tidak tumpang tindih. Saya menguji modul Payment Voucher dan Journal Receive Voucher (83 kasus uji), sedangkan rekan KP menguji Journal Payment Voucher dan Payment Process System (71 kasus uji). Jenis pengujian yang saya lakukan meliputi fungsional (pencarian, filter, dan aksi pada tabel), navigasi, serta UI (tampilan \textit{dropdown}, \textit{modal}, dan \textit{layout}). Dari 83 kasus uji saya, 8 berstatus \textit{FAILED}. Contoh \textit{bug} yang saya laporkan adalah TC-JRV-036: tombol Close pada modal detail Journal Receive Voucher tidak ter-render, sehingga modal tidak bisa ditutup dengan tombol tersebut (status Open). \textit{Bug} dilaporkan ke \textit{developer} melalui Basecamp. Tingkat \textit{severity} yang saya gunakan adalah:
+\begin{itemize}
+\item \textit{Minor}: hanya memengaruhi tampilan (\textit{UI only}), fungsi tetap berjalan;
+\item \textit{Medium}: fitur tidak berfungsi sebagaimana mestinya, tetapi alur utama masih bisa dijalankan;
+\item \textit{Major}: memengaruhi alur sehingga hasil yang keluar salah; dan
+\item \textit{Blocker}: hasil tidak keluar sama sekali, sehingga alur tidak bisa diselesaikan.
+\end{itemize}
+Severity ditentukan oleh QA, sedangkan prioritas perbaikan direkomendasikan QA dan ditetapkan oleh \textit{Project Manager}.
 
 \section{\textit{Integration Testing}}
-\textit{Integration testing} memeriksa alur yang melibatkan lebih dari satu modul, misalnya data yang dibuat di satu modul lalu dipakai di modul lain. Tahap ini dikerjakan setelah \textit{module testing}, supaya \textit{bug} di dalam modul tidak mengacaukan hasil pengujian interaksi antarmodul. Di tahap ini saya dan rekan KP bekerja bersama karena alur yang diuji sering melibatkan modul kami berdua. \TEKNIS{alur lintas modul yang diuji, \textit{bug} interaksi yang ditemukan, dan cara pelaporannya}
+\textit{Integration testing} memeriksa alur yang melibatkan lebih dari satu modul, misalnya data yang dibuat di satu modul lalu dipakai di modul lain. Tahap ini dikerjakan setelah \textit{module testing}, supaya \textit{bug} di dalam modul tidak mengacaukan hasil pengujian interaksi antarmodul. Di tahap ini saya dan rekan KP bekerja bersama karena alur yang diuji sering melibatkan modul kami berdua. Alur lintas modul saya catat di sheet terpisah, yaitu \textit{Flow Apps}, bukan di \textit{test case} modul. Contohnya:
+\begin{itemize}
+\item alur invoice vendor di IMS, yang dimulai dari pengajuan vendor, lalu melewati persetujuan DEA, AMS, dan IMS, dilanjutkan penerimaan invoice, VAT, WHT, sampai pengarsipan dokumen hardcopy;
+\item alur Cross Patrol di SHE, yang dimulai dari pembuatan patroli, dilanjutkan \textit{follow up} oleh PIC dengan akun berbeda, lalu dipantau di menu \textit{monitoring}; dan
+\item alur persetujuan Summarize dan Refund di Payment, yang melewati beberapa approver dengan peran berbeda.
+\end{itemize}
+Contoh \textit{bug} yang tercatat pada alur lintas menu adalah kolom Hub dan Member yang tidak muncul setelah patroli Cross Patrol dibuat, serta tombol close pada \textit{follow up} Patrol 5K non-safety yang tidak muncul sehingga status tidak bisa diubah. Kedua \textit{bug} ini dilaporkan melalui Basecamp. \TEKNIS{jumlah \textit{bug} interaksi yang ditemukan dan \textit{severity}-nya}
 
 \section{\textit{Regression Testing}}
-\textit{Regression testing} dilakukan untuk memastikan perbaikan \textit{bug} atau perubahan fitur tidak merusak bagian aplikasi yang sebelumnya sudah jalan. Saya menjalankan ulang \textit{test script} yang relevan di \textit{build} terbaru dan memastikan \textit{bug} yang dilaporkan sudah teratasi. Tahap ini paling singkat karena \textit{test script} dan urutan pengujiannya sudah ada dari tahap sebelumnya, jadi tinggal dijalankan ulang. \TEKNIS{cakupan regresi (semua atau sebagian \textit{test script}), jumlah \textit{bug} yang lolos verifikasi, dan \textit{bug} yang masih terbuka}
+\textit{Regression testing} dilakukan untuk memastikan perbaikan \textit{bug} atau perubahan fitur tidak merusak bagian aplikasi yang sebelumnya sudah jalan. Saya menjalankan ulang \textit{test script} yang relevan di \textit{build} terbaru dan memastikan \textit{bug} yang dilaporkan sudah teratasi. Tahap ini paling singkat karena \textit{test script} dan urutan pengujiannya sudah ada dari tahap sebelumnya, jadi tinggal dijalankan ulang. Pada sheet \textit{Flow Apps}, langkah yang sudah diperbaiki diberi penanda \textit{Retest}, misalnya penerimaan invoice vendor dan penerimaan hardcopy di alur IMS. \TEKNIS{cakupan regresi (semua atau sebagian \textit{test script}), jumlah \textit{bug} yang lolos verifikasi, dan \textit{bug} yang masih terbuka}
 
 \section{Dinamika Pekerjaan dan Profesionalisme}
 Selama KP saya bekerja sehari-hari bersama tim proyek dan sering berkomunikasi dengan \textit{developer} soal \textit{bug} yang ditemukan. Beberapa dinamika yang saya alami:
@@ -62,9 +84,9 @@ Hasil pekerjaan saya selama KP dirangkum pada Tabel~\ref{tab:hasil-pekerjaan}.
 \hline
 \textbf{Hasil} & \textbf{Keterangan} & \textbf{Jumlah} \\
 \hline
-\textit{Test script} & \textit{Test script} untuk modul yang ditugaskan & \TEKNIS{jumlah} \\
+\textit{Test script} & \textit{Test script} untuk modul yang ditugaskan & 154 \\
 \hline
-\textit{Bug report} & \textit{Bug} yang ditemukan di \textit{module}, \textit{integration}, dan \textit{regression testing} & \TEKNIS{jumlah} \\
+\textit{Bug report} & \textit{Bug} yang ditemukan di \textit{module}, \textit{integration}, dan \textit{regression testing} & 14 (\textit{module testing}) \\
 \hline
 Laporan hasil pengujian & Ringkasan hasil \textit{module}, \textit{integration}, dan \textit{regression testing} & \TEKNIS{jumlah} \\
 \hline
