@@ -1,7 +1,7 @@
 \chapter{Organisasi atau Lingkungan Kerja Praktik}
 
 \section{Struktur Organisasi}
-PT Radya Anugrah Digital merupakan bagian dari Radya Group. Radya Group terdiri atas Radya Labs Teknologi sebagai perusahaan induk serta beberapa perusahaan yang bergerak di bidang berbeda, yaitu Radya Anugrah Digital, Raditya Alkademi Digital, Radya Acceleration Digital, dan Radya Tosanarka Vidia (Radya Labs 2023). Radya Anugrah Digital bergerak di bidang pengembangan perangkat lunak dan menjadi tempat saya melaksanakan KP. Gambar~\ref{fig:struktur-grup} menunjukkan posisi Radya Anugrah Digital di Radya Group, dengan arsiran untuk tempat saya bekerja.
+PT Radya Anugrah Digital merupakan bagian dari Radya Group. Radya Group terdiri atas Radya Labs Teknologi sebagai perusahaan induk serta beberapa perusahaan yang bergerak di bidang berbeda, yaitu Radya Anugrah Digital, Raditya Alkademi Digital, Radya Acceleration Digital, dan Radya Tosanarka Vidia (Radya Labs 2023). Radya Anugrah Digital bergerak di bidang pengembangan perangkat lunak dan menjadi tempat kami melaksanakan KP. Gambar~\ref{fig:struktur-grup} menunjukkan posisi Radya Anugrah Digital di Radya Group, dengan arsiran untuk tempat kami bekerja.
 
 \begin{figure}[H]
 \centering
@@ -19,15 +19,29 @@ PT Radya Anugrah Digital merupakan bagian dari Radya Group. Radya Group terdiri 
 \label{fig:struktur-grup}
 \end{figure}
 
-\ISI{struktur organisasi internal Radya Anugrah Digital (misalnya divisi engineering, QA, dan produk) dan posisi tim proyek Komatsu ESS di dalamnya, dari pembimbing atau HRD}
+Di dalam proyek Komatsu ESS, tim dipimpin oleh \textit{Project Manager} yang sekaligus menjadi \textit{mentor} kami. Di bawahnya terdapat tim \textit{developer} dan tim \textit{Quality Assurance} (QA). Gambar~\ref{fig:struktur-tim} menunjukkan struktur tim tersebut, dengan arsiran untuk tim tempat kami bekerja.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[font=\footnotesize,>=stealth,
+  box/.style={draw,minimum width=3.2cm,minimum height=0.9cm,align=center,text width=3cm},
+  hl/.style={box,fill=black!15}]
+\node[box] (pm) at (0,0) {Project Manager dan Mentor\\(Ibu Alyssa Christella)};
+\node[box] (dev) at (-2.6,-2.2) {Tim Developer};
+\node[hl] (qa) at (2.6,-2.2) {Tim QA};
+\foreach \n in {dev,qa}{\draw[->] (pm.south) -- ++(0,-0.6) -| (\n.north);}
+\end{tikzpicture}
+\caption{Struktur tim proyek Komatsu ESS}
+\label{fig:struktur-tim}
+\end{figure}
 
 \section{Unit Kerja}
 
 \subsection{Tim Proyek Komatsu ESS}
-Saya ditempatkan pada tim proyek Komatsu ESS sebagai \textit{Quality Assurance}. \textit{Project Manager} proyek ini sekaligus \textit{mentor} saya adalah Ibu Alyssa Christella. Selain beliau, tim proyek terdiri atas \textit{developer} dan \textit{tester}. \ISI{anggota tim proyek lain dan perannya, jika ingin dicantumkan} Saya bekerja bersama satu rekan KP, Zulfaqqar Nayaka Athadiansyah, yang juga berperan sebagai \textit{Quality Assurance}.
+Kami ditempatkan pada tim proyek Komatsu ESS sebagai \textit{Quality Assurance}. \textit{Project Manager} proyek ini sekaligus \textit{mentor} kami adalah Ibu Alyssa Christella. Selain beliau, tim proyek terdiri atas tim \textit{developer} dan tim QA. Kami bekerja berdua sebagai mahasiswa KP, yaitu Naufarrel Zhafif Abhista dan Zulfaqqar Nayaka Athadiansyah, yang sama-sama berperan sebagai \textit{Quality Assurance}.
 
 \subsection{Lingkup Pekerjaan Tim QA}
-Tim QA memastikan aplikasi yang dikembangkan sesuai kebutuhan klien sebelum diserahkan. Caranya dengan menyusun \textit{test script}, menjalankan pengujian, melaporkan \textit{bug} ke \textit{developer}, dan memverifikasi perbaikannya. Pekerjaan saya bagian dari tugas itu, yaitu menguji modul-modul Komatsu ESS yang ditugaskan Ibu Alyssa. Peran saya dan rekan KP dirangkum pada Tabel~\ref{tab:peran-kp}.
+Tim QA memastikan aplikasi yang dikembangkan sesuai kebutuhan klien sebelum diserahkan. Caranya dengan menyusun \textit{test script}, menjalankan pengujian, melaporkan \textit{bug} ke \textit{developer}, dan memverifikasi perbaikannya. Pekerjaan kami bagian dari tugas itu, yaitu menguji modul-modul Komatsu ESS yang ditugaskan Ibu Alyssa. Peran kami dirangkum pada Tabel~\ref{tab:peran-kp}.
 
 \begin{table}[H]
 \caption{Peran mahasiswa KP pada tim QA proyek Komatsu ESS}
@@ -45,7 +59,7 @@ Zulfaqqar Nayaka Athadiansyah (13523094) & \textit{Quality Assurance} & Menyusun
 \end{table}
 
 \section{Deskripsi Pekerjaan}
-Pekerjaan saya terbagi menjadi enam tahap yang berurutan dan sedikit tumpang tindih, seperti pada Tabel~\ref{tab:tahap-pekerjaan}. Pe\textit{bug report} dilakukan pada setiap tahap pengujian. Setiap tahap saya jelaskan di Bab III.
+Pekerjaan kami terbagi menjadi enam tahap yang berurutan dan sedikit tumpang tindih, seperti pada Tabel~\ref{tab:tahap-pekerjaan}. Pelaporan \textit{bug} dilakukan pada setiap tahap pengujian. Setiap tahap kami jelaskan di Bab III.
 
 \begin{table}[H]
 \caption{Tahapan pekerjaan}
@@ -71,7 +85,7 @@ Pekerjaan saya terbagi menjadi enam tahap yang berurutan dan sedikit tumpang tin
 \end{table}
 
 \section{Jadwal Kerja}
-KP berlangsung 13 minggu, dari 22 Juni sampai 22 September 2026. Tabel~\ref{tab:jadwal-kerja} menunjukkan gambaran jadwalnya, dan kegiatan harian saya catat di \textit{Log Activity} pada Lampiran B. Jadwal ini mengikuti rencana di TOR (Lampiran A).
+KP berlangsung 13 minggu, dari 22 Juni sampai 22 September 2026. Tabel~\ref{tab:jadwal-kerja} menunjukkan gambaran jadwalnya, dan kegiatan harian kami catat di \textit{Log Activity} pada Lampiran B. Jadwal ini mengikuti rencana di TOR (Lampiran A).
 
 \begin{table}[H]
 \caption{Gambaran jadwal kegiatan selama KP}

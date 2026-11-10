@@ -1,13 +1,13 @@
 \chapter{Pengujian Perangkat Lunak Aplikasi Komatsu ESS}
 
-Bab ini menceritakan apa yang saya kerjakan sebagai \textit{Quality Assurance} (QA) di proyek Komatsu ESS. Karena pekerjaannya berupa tugas pengujian dari perusahaan, ceritanya saya urutkan mengikuti tahapan kerja, mulai dari rencana kerja sampai hasil akhir. Kendala dan dinamika kerja saya bahas di bagian tersendiri.
+Bab ini menceritakan apa yang kami kerjakan sebagai \textit{Quality Assurance} (QA) di proyek Komatsu ESS. Karena pekerjaannya berupa tugas pengujian dari perusahaan, ceritanya kami urutkan mengikuti tahapan kerja, mulai dari rencana kerja sampai hasil akhir. Kendala dan dinamika kerja kami bahas di bagian tersendiri.
 
 \section{Rencana Kerja}
 
 \subsection{Pembahasan Rencana Kerja}
-Di awal KP, saya dan rekan KP bertemu dengan Ibu Alyssa selaku \textit{Project Manager} sekaligus \textit{mentor}. Di pertemuan itu beliau menjelaskan proyek Komatsu ESS, peran tim QA, dan apa yang diharapkan dari kami. Hasilnya:
+Di awal KP, kami bertemu dengan Ibu Alyssa selaku \textit{Project Manager} sekaligus \textit{mentor}. Di pertemuan itu beliau menjelaskan proyek Komatsu ESS, peran tim QA, dan apa yang diharapkan dari kami. Hasilnya:
 \begin{enumerate}[label=\alph*)]
-\item saya dan rekan KP bekerja sebagai \textit{Quality Assurance} di proyek Komatsu ESS;
+\item kami bekerja sebagai \textit{Quality Assurance} di proyek Komatsu ESS;
 \item pengujian dilakukan bertahap: menyusun draf \textit{test script}, \textit{module testing}, \textit{integration testing}, lalu \textit{regression testing};
 \item rencana kerja dan jadwal dituangkan dalam TOR di Lampiran A; dan
 \item kegiatan harian dicatat di \textit{log activity} dan dilaporkan ke Ibu Alyssa.
@@ -15,17 +15,17 @@ Di awal KP, saya dan rekan KP bertemu dengan Ibu Alyssa selaku \textit{Project M
 \ISI{sesuaikan hasil pertemuan awal dengan yang sebenarnya terjadi}
 
 \subsection{Orientasi Aplikasi dan Lingkungan Kerja}
-Dua minggu pertama saya pakai untuk mengenal aplikasi Komatsu ESS, \textit{business flow}-nya, serta alat dan cara kerja tim. Tahap ini penting karena seorang \textit{tester} harus tahu dulu bagaimana aplikasi seharusnya berperilaku sebelum bisa menilai apakah suatu hasil salah. \TEKNIS{dokumen yang dipelajari (misalnya \textit{requirement} dan desain), alat yang diperkenalkan, dan \textit{environment} pengujian yang dipakai}
+Dua minggu pertama kami pakai untuk mengenal aplikasi Komatsu ESS, \textit{business flow}-nya, serta alat dan cara kerja tim. Tahap ini penting karena seorang \textit{tester} harus tahu dulu bagaimana aplikasi seharusnya berperilaku sebelum bisa menilai apakah suatu hasil salah. Kondisi awal aplikasi web saat kami mulai bekerja, banyak fitur yang belum termigrasi ke Metronic 8, sehingga kami perlu membandingkannya dengan Metronic 7 untuk tiap modul. Alat yang diperkenalkan kepada kami adalah sheet \textit{Test Case Consolidation} (TCC) sebagai tempat menulis \textit{test script}, sheet \textit{List Fitur Web \& Mobile} sebagai daftar fitur dan statusnya, Basecamp untuk memperbarui pekerjaan per tiket fitur, serta Jam untuk merekam \textit{bug} beserta langkah reproduksinya. Lingkungan pengujian berupa server dev Komatsu untuk Metronic 7 dan Metronic 8. \TEKNIS{dokumen \textit{requirement} yang dipelajari dan akses akun uji yang dipakai}
 
 \section{Penyusunan Draf \textit{Test Script}}
-\textit{Test script} adalah panduan tertulis berisi langkah pengujian, data masukan, dan \textit{expected result} untuk satu fungsi aplikasi. Dengan \textit{test script}, pengujian bisa diulang dan hasilnya bisa dibandingkan, siapa pun yang menjalankannya. Saya menyusunnya dengan langkah berikut:
+\textit{Test script} adalah panduan tertulis berisi langkah pengujian, data masukan, dan \textit{expected result} untuk satu fungsi aplikasi. Dengan \textit{test script}, pengujian bisa diulang dan hasilnya bisa dibandingkan, siapa pun yang menjalankannya. Kami menyusunnya dengan langkah berikut:
 \begin{enumerate}[label=\arabic*)]
 \item mempelajari \textit{requirement} dan perilaku fitur di modul yang ditugaskan;
 \item menentukan skenario uji, baik skenario normal maupun yang tidak normal;
 \item menulis langkah, data uji, dan \textit{expected result} di setiap \textit{test script}; dan
 \item meminta \textit{review} dari Ibu Alyssa, lalu memperbaiki \textit{test script} sesuai masukan.
 \end{enumerate}
-Saya menulis \textit{test script} di Google Sheets dengan kolom Fitur, Sub Menu, ID Case, Skenario Pengujian, Precondition, Step Details, Expected Result, Actual Result, Status (P/F), Type, ENV Issue, Status Dev \& QA, Report BC, Tester, Evidence, dan Due Date. Contoh satu \textit{test script} (disederhanakan) adalah sebagai berikut:
+Kami menulis \textit{test script} di Google Sheets dengan kolom Fitur, Sub Menu, ID Case, Skenario Pengujian, Precondition, Step Details, Expected Result, Actual Result, Status (P/F), Type, ENV Issue, Status Dev \& QA, Report BC, Tester, Evidence, dan Due Date. Contoh satu \textit{test script} (disederhanakan) adalah sebagai berikut:
 \begin{itemize}
 \item ID Case: TC-JRV-013
 \item Skenario Pengujian: pencarian dengan nama RECEIVED FROM
@@ -34,24 +34,24 @@ Saya menulis \textit{test script} di Google Sheets dengan kolom Fitur, Sub Menu,
 \item Expected Result: tabel hanya menampilkan baris dengan RECEIVED FROM yang sesuai
 \item Actual Result: hasil kosong (\textit{FAILED}, Type: BUG)
 \end{itemize}
-Jumlah \textit{test script} yang saya susun untuk modul yang saya uji sebanyak 154 kasus uji.
+Jumlah \textit{test script} yang kami susun untuk modul yang diuji sebanyak 154 kasus uji.
 
-Di tahap ini, kendalanya adalah sebagian \textit{requirement} belum tertulis rinci. Saya mengatasinya dengan bertanya langsung ke anggota tim yang paham fitur tersebut, lalu mencatat jawabannya di \textit{test script}. \ISI{kendala yang benar-benar terjadi di tahap ini}
+Di tahap ini, kendalanya adalah sebagian \textit{requirement} belum tertulis rinci. Kami mengatasinya dengan bertanya langsung ke anggota tim yang paham fitur tersebut, lalu mencatat jawabannya di \textit{test script}. \ISI{kendala yang benar-benar terjadi di tahap ini}
 
 \section{\textit{Module Testing}}
-\textit{Module testing} memeriksa tiap modul secara terpisah untuk memastikan fungsinya sudah sesuai \textit{requirement}. Saya menjalankan \textit{test script} di modul yang ditugaskan dan mencatat tiap langkah sebagai \textit{pass} atau \textit{fail}. Kalau \textit{actual result} berbeda dari \textit{expected result}, saya membuat \textit{bug report} untuk \textit{developer}. Isinya \textit{steps to reproduce}, \textit{expected result}, \textit{actual result}, \textit{severity}, dan bukti berupa \textit{screenshot} atau rekaman layar. Setelah \textit{bug} diperbaiki, saya cek ulang perbaikannya.
+\textit{Module testing} memeriksa tiap modul secara terpisah untuk memastikan fungsinya sudah sesuai \textit{requirement}. Kami menjalankan \textit{test script} di modul yang ditugaskan dan mencatat tiap langkah sebagai \textit{pass} atau \textit{fail}. Kalau \textit{actual result} berbeda dari \textit{expected result}, kami membuat \textit{bug report} untuk \textit{developer}. Isinya \textit{steps to reproduce}, \textit{expected result}, \textit{actual result}, \textit{severity}, dan bukti berupa \textit{screenshot} atau rekaman layar. Setelah \textit{bug} diperbaiki, kami cek ulang perbaikannya.
 
-Modul yang diuji dibagi oleh Ibu Alyssa antara saya dan rekan KP supaya tidak tumpang tindih. Saya menguji modul Payment Voucher dan Journal Receive Voucher (83 kasus uji), sedangkan rekan KP menguji Journal Payment Voucher dan Payment Process System (71 kasus uji). Jenis pengujian yang saya lakukan meliputi fungsional (pencarian, filter, dan aksi pada tabel), navigasi, serta UI (tampilan \textit{dropdown}, \textit{modal}, dan \textit{layout}). Dari 83 kasus uji saya, 8 berstatus \textit{FAILED}. Contoh \textit{bug} yang saya laporkan adalah TC-JRV-036: tombol Close pada modal detail Journal Receive Voucher tidak ter-render, sehingga modal tidak bisa ditutup dengan tombol tersebut (status Open). \textit{Bug} dilaporkan ke \textit{developer} melalui Basecamp. Tingkat \textit{severity} yang saya gunakan adalah:
+Modul yang diuji dibagi oleh Ibu Alyssa antara kami berdua supaya tidak tumpang tindih. Naufarrel menguji modul Payment Voucher dan Journal Receive Voucher (83 kasus uji), sedangkan Zulfaqqar Nayaka Athadiansyah menguji modul Journal Payment Voucher dan Payment Process System (71 kasus uji). Jenis pengujian yang kami lakukan meliputi fungsional (pencarian, filter, dan aksi pada tabel), navigasi, serta UI (tampilan \textit{dropdown}, \textit{modal}, dan \textit{layout}). Dari 83 kasus uji Naufarrel, 8 berstatus \textit{FAILED}. Contoh \textit{bug} yang dilaporkan adalah TC-JRV-036: tombol Close pada modal detail Journal Receive Voucher tidak ter-render, sehingga modal tidak bisa ditutup dengan tombol tersebut (status Open). \textit{Bug} dilaporkan ke \textit{developer} melalui Basecamp. Tingkat \textit{severity} yang kami gunakan adalah:
 \begin{itemize}
 \item \textit{Minor}: hanya memengaruhi tampilan (\textit{UI only}), fungsi tetap berjalan;
 \item \textit{Medium}: fitur tidak berfungsi sebagaimana mestinya, tetapi alur utama masih bisa dijalankan;
 \item \textit{Major}: memengaruhi alur sehingga hasil yang keluar salah; dan
 \item \textit{Blocker}: hasil tidak keluar sama sekali, sehingga alur tidak bisa diselesaikan.
 \end{itemize}
-Severity ditentukan oleh QA, sedangkan prioritas perbaikan direkomendasikan QA dan ditetapkan oleh \textit{Project Manager}.
+\textit{Severity} ditentukan oleh QA, sedangkan prioritas perbaikan direkomendasikan QA dan ditetapkan oleh \textit{Project Manager}.
 
 \section{\textit{Integration Testing}}
-\textit{Integration testing} memeriksa alur yang melibatkan lebih dari satu modul, misalnya data yang dibuat di satu modul lalu dipakai di modul lain. Tahap ini dikerjakan setelah \textit{module testing}, supaya \textit{bug} di dalam modul tidak mengacaukan hasil pengujian interaksi antarmodul. Di tahap ini saya dan rekan KP bekerja bersama karena alur yang diuji sering melibatkan modul kami berdua. Alur lintas modul saya catat di sheet terpisah, yaitu \textit{Flow Apps}, bukan di \textit{test case} modul. Contohnya:
+\textit{Integration testing} memeriksa alur yang melibatkan lebih dari satu modul, misalnya data yang dibuat di satu modul lalu dipakai di modul lain. Tahap ini dikerjakan setelah \textit{module testing}, supaya \textit{bug} di dalam modul tidak mengacaukan hasil pengujian interaksi antarmodul. Di tahap ini kami bekerja bersama karena alur yang diuji sering melibatkan modul dari kami berdua. Alur lintas modul kami catat di sheet terpisah, yaitu \textit{Flow Apps}, bukan di \textit{test case} modul. Contohnya:
 \begin{itemize}
 \item alur invoice vendor di IMS, yang dimulai dari pengajuan vendor, lalu melewati persetujuan DEA, AMS, dan IMS, dilanjutkan penerimaan invoice, VAT, WHT, sampai pengarsipan dokumen hardcopy;
 \item alur Cross Patrol di SHE, yang dimulai dari pembuatan patroli, dilanjutkan \textit{follow up} oleh PIC dengan akun berbeda, lalu dipantau di menu \textit{monitoring}; dan
@@ -60,21 +60,21 @@ Severity ditentukan oleh QA, sedangkan prioritas perbaikan direkomendasikan QA d
 Contoh \textit{bug} yang tercatat pada alur lintas menu adalah kolom Hub dan Member yang tidak muncul setelah patroli Cross Patrol dibuat, serta tombol close pada \textit{follow up} Patrol 5K non-safety yang tidak muncul sehingga status tidak bisa diubah. Kedua \textit{bug} ini dilaporkan melalui Basecamp. \TEKNIS{jumlah \textit{bug} interaksi yang ditemukan dan \textit{severity}-nya}
 
 \section{\textit{Regression Testing}}
-\textit{Regression testing} dilakukan untuk memastikan perbaikan \textit{bug} atau perubahan fitur tidak merusak bagian aplikasi yang sebelumnya sudah jalan. Saya menjalankan ulang \textit{test script} yang relevan di \textit{build} terbaru dan memastikan \textit{bug} yang dilaporkan sudah teratasi. Tahap ini paling singkat karena \textit{test script} dan urutan pengujiannya sudah ada dari tahap sebelumnya, jadi tinggal dijalankan ulang. Pada sheet \textit{Flow Apps}, langkah yang sudah diperbaiki diberi penanda \textit{Retest}, misalnya penerimaan invoice vendor dan penerimaan hardcopy di alur IMS. \TEKNIS{cakupan regresi (semua atau sebagian \textit{test script}), jumlah \textit{bug} yang lolos verifikasi, dan \textit{bug} yang masih terbuka}
+\textit{Regression testing} dilakukan untuk memastikan perbaikan \textit{bug} atau perubahan fitur tidak merusak bagian aplikasi yang sebelumnya sudah jalan. Kami menjalankan ulang \textit{test script} yang relevan di \textit{build} terbaru dan memastikan \textit{bug} yang dilaporkan sudah teratasi. Tahap ini paling singkat karena \textit{test script} dan urutan pengujiannya sudah ada dari tahap sebelumnya, jadi tinggal dijalankan ulang. Pada sheet \textit{Flow Apps}, langkah yang sudah diperbaiki diberi penanda \textit{Retest}, misalnya penerimaan invoice vendor dan penerimaan hardcopy di alur IMS. \TEKNIS{cakupan regresi (semua atau sebagian \textit{test script}), jumlah \textit{bug} yang lolos verifikasi, dan \textit{bug} yang masih terbuka}
 
 \section{Dinamika Pekerjaan dan Profesionalisme}
-Selama KP saya bekerja sehari-hari bersama tim proyek dan sering berkomunikasi dengan \textit{developer} soal \textit{bug} yang ditemukan. Beberapa dinamika yang saya alami:
+Selama KP kami bekerja sehari-hari bersama tim proyek dan sering berkomunikasi dengan \textit{developer} soal \textit{bug} yang ditemukan. Beberapa dinamika yang kami alami:
 \begin{enumerate}[label=\arabic*)]
-\item \textbf{Perubahan \textit{requirement} dan \textit{build}.} Fitur dan \textit{build} bisa berubah di tengah pengujian, sehingga \textit{test script} harus diperbarui. Saya menyesuaikan \textit{test script} dan mengabari Ibu Alyssa supaya jadwal tetap terkendali.
-\item \textbf{Beda pendapat soal \textit{bug}.} Kadang \textit{developer} menilai temuan saya sebagai perilaku yang memang disengaja. Saya menyampaikan bukti dan merujuk ke \textit{requirement}, lalu keputusan akhirnya diserahkan ke Ibu Alyssa.
-\item \textbf{Koordinasi dengan rekan KP.} Saya dan rekan saling berbagi informasi soal temuan dan hasil uji supaya tidak ada \textit{bug} yang dilaporkan dua kali.
+\item \textbf{Perubahan \textit{requirement} dan \textit{build}.} Fitur dan \textit{build} bisa berubah di tengah pengujian, sehingga \textit{test script} harus diperbarui. Kami menyesuaikan \textit{test script} dan mengabari Ibu Alyssa supaya jadwal tetap terkendali.
+\item \textbf{Beda pendapat soal \textit{bug}.} Kadang \textit{developer} menilai temuan kami sebagai perilaku yang memang disengaja. Kami menyampaikan bukti dan merujuk ke \textit{requirement}, lalu keputusan akhirnya diserahkan ke Ibu Alyssa.
+\item \textbf{Koordinasi antarmahasiswa KP.} Kami saling berbagi informasi soal temuan dan hasil uji supaya tidak ada \textit{bug} yang dilaporkan dua kali.
 \end{enumerate}
 \ISI{ganti atau hapus butir di atas sesuai kejadian dan kendala yang benar-benar dialami}
 
-Dalam bekerja, saya berusaha bersikap profesional: hadir tepat waktu, mencatat kegiatan harian di \textit{log activity}, dan menjaga kerahasiaan informasi proyek serta data klien. Saya juga menyampaikan temuan secara objektif dan sopan, dengan fokus pada perilaku aplikasi, bukan pada orang yang membuatnya.
+Dalam bekerja, kami berusaha bersikap profesional: hadir tepat waktu, mencatat kegiatan harian di \textit{log activity}, dan menjaga kerahasiaan informasi proyek serta data klien. Kami juga menyampaikan temuan secara objektif dan sopan, dengan fokus pada perilaku aplikasi, bukan pada orang yang membuatnya.
 
 \section{Hasil Pekerjaan}
-Hasil pekerjaan saya selama KP dirangkum pada Tabel~\ref{tab:hasil-pekerjaan}.
+Hasil pekerjaan kami selama KP dirangkum pada Tabel~\ref{tab:hasil-pekerjaan}.
 
 \begin{table}[H]
 \caption{Hasil pekerjaan}
