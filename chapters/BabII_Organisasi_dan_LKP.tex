@@ -1,6 +1,8 @@
 \chapter{Organisasi atau Lingkungan Kerja Praktik}
 
 \section{Struktur Organisasi}
+Radya Labs berdiri pada 2011 dan mengembangkan perangkat lunak bagi pemerintah, perusahaan multinasional, serta usaha kecil dan menengah. Menurut \textit{company profile}-nya, perusahaan ini memiliki lebih dari 13 tahun pengalaman, menaungi lebih dari 80 karyawan, dan telah mengerjakan lebih dari 200 proyek bagi lebih dari 100 klien (Radya Labs t.t.). Bidang keahliannya meliputi pengembangan web dan \textit{mobile}, desain UI/UX, pengelolaan infrastruktur, serta aplikasi berbasis kecerdasan artifisial. Perusahaan dipimpin oleh Rudi Hartono sebagai \textit{Chief Executive Officer}\label{ist:ceo} (CEO) dan Krisdhamara Pritha sebagai \textit{Vice President} Operations, didampingi para pendiri Hari Bagus Firdaus, Puja Pramudya, dan Tito Daniswara.
+
 PT Radya Anugrah Digital merupakan bagian dari Radya Group. Radya Group terdiri atas Radya Labs Teknologi sebagai perusahaan induk serta beberapa perusahaan yang bergerak di bidang berbeda, yaitu Radya Anugrah Digital, Raditya Alkademi Digital, Radya Acceleration Digital, dan Radya Tosanarka Vidia (Radya Labs 2023). Radya Anugrah Digital bergerak di bidang pengembangan perangkat lunak dan menjadi tempat kami melaksanakan KP. Gambar~\ref{fig:struktur-grup} menunjukkan posisi Radya Anugrah Digital di Radya Group, dengan arsiran untuk tempat kami bekerja.
 
 \begin{figure}[H]
@@ -19,17 +21,31 @@ PT Radya Anugrah Digital merupakan bagian dari Radya Group. Radya Group terdiri 
 \label{fig:struktur-grup}
 \end{figure}
 
-Di dalam proyek Komatsu ESS, tim dipimpin oleh \textit{Project Manager} yang sekaligus menjadi \textit{mentor} kami. Di bawahnya terdapat tim \textit{developer} dan tim \textit{Quality Assurance} (QA). Gambar~\ref{fig:struktur-tim} menunjukkan struktur tim tersebut, dengan arsiran untuk tim tempat kami bekerja.
+Di dalam proyek Komatsu ESS, tim dipimpin oleh \textit{Project Manager} yang sekaligus menjadi \textit{mentor} kami. Beliau berkoordinasi langsung dengan tim IT Komatsu selaku pihak klien. Di bawah \textit{Project Manager} terdapat tiga tim yang menjalankan pekerjaan sehari-hari, yaitu tim IT Operations (IT Ops), tim \textit{Quality Assurance} (QA), dan tim \textit{Developer}. Tim \textit{Developer} terbagi lagi menurut platform yang dikerjakan, yaitu \textit{iOS developer}, \textit{Android developer}, dan \textit{web developer}. Gambar~\ref{fig:struktur-tim} menunjukkan struktur tersebut, dengan arsiran untuk tim tempat kami bekerja.
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[font=\footnotesize,>=stealth,
-  box/.style={draw,minimum width=3.2cm,minimum height=0.9cm,align=center,text width=3cm},
-  hl/.style={box,fill=black!15}]
-\node[box] (pm) at (0,0) {Project Manager dan Mentor\\(Ibu Alyssa Christella)};
-\node[box] (dev) at (-2.6,-2.2) {Tim Developer};
-\node[hl] (qa) at (2.6,-2.2) {Tim QA};
-\foreach \n in {dev,qa}{\draw[->] (pm.south) -- ++(0,-0.6) -| (\n.north);}
+\begin{tikzpicture}[font=\footnotesize,>=stealth,xshift=-1cm,
+  box/.style={draw,rounded corners=1pt,minimum height=0.9cm,align=center},
+  pmbox/.style={box,minimum width=4.6cm,text width=4.4cm},
+  klien/.style={box,minimum width=3.2cm,text width=3cm},
+  unit/.style={box,minimum width=2.7cm,text width=2.5cm},
+  leaf/.style={box,minimum width=2.2cm,text width=2cm},
+  hl/.style={unit,fill=black!15}]
+% baris 1: PM dan klien
+\node[pmbox] (pm) at (0,0) {\textit{Project Manager}\\[1pt] dan Mentor\\(Ibu Alyssa Christella)};
+\node[klien] (kom) at (5.9,0) {Tim IT Komatsu\\(Pak Riko)};
+\draw[<->,dashed] (pm.east) -- node[above=3pt,font=\scriptsize]{koordinasi} (kom.west);
+% baris 2: unit kerja di bawah PM
+\node[unit] (ops) at (-4.1,-2.8) {Tim IT Ops};
+\node[hl] (qa) at (-0.6,-2.8) {Tim QA};
+\node[unit] (dev) at (2.9,-2.8) {Tim \textit{Developer}};
+\foreach \n in {ops,qa,dev}{\draw[->] (pm.south) -- ++(0,-0.6) -| (\n.north);}
+% baris 3: pembagian tim developer
+\node[leaf] (ios) at (0.75,-5.0) {\textit{iOS}\\\textit{Developer}};
+\node[leaf] (and) at (2.9,-5.0) {\textit{Android}\\\textit{Developer}};
+\node[leaf] (web) at (5.05,-5.0) {\textit{Web}\\\textit{Developer}};
+\foreach \n in {ios,and,web}{\draw[->] (dev.south) -- ++(0,-0.5) -| (\n.north);}
 \end{tikzpicture}
 \caption{Struktur tim proyek Komatsu ESS}
 \label{fig:struktur-tim}
@@ -38,10 +54,10 @@ Di dalam proyek Komatsu ESS, tim dipimpin oleh \textit{Project Manager} yang sek
 \section{Unit Kerja}
 
 \subsection{Tim Proyek Komatsu ESS}
-Kami ditempatkan pada tim proyek Komatsu ESS sebagai \textit{Quality Assurance}. \textit{Project Manager} proyek ini sekaligus \textit{mentor} kami adalah Ibu Alyssa Christella. Selain beliau, tim proyek terdiri atas tim \textit{developer} dan tim QA. Kami bekerja berdua sebagai mahasiswa KP, yaitu Naufarrel Zhafif Abhista dan Zulfaqqar Nayaka Athadiansyah, yang sama-sama berperan sebagai \textit{Quality Assurance}.
+Kami ditempatkan pada tim proyek Komatsu ESS sebagai \textit{Quality Assurance}. \textit{Project Manager} proyek ini sekaligus \textit{mentor} kami adalah Ibu Alyssa Christella. Beliau menjadi penghubung antara tim internal Radya Digital dan tim IT Komatsu yang diwakili Pak Riko, sehingga keputusan soal \textit{bug} maupun perubahan \textit{requirement} melewati beliau. Di bawah \textit{Project Manager}, pekerjaan dijalankan oleh tiga tim: tim IT Ops yang menangani infrastruktur dan server dev, tim QA yang menguji aplikasi, serta tim \textit{Developer} yang memperbaiki dan mengembangkan fitur. Tim \textit{Developer} sendiri terbagi menurut platform, yaitu \textit{iOS developer}, \textit{Android developer}, dan \textit{web developer}. Kami bekerja berdua sebagai mahasiswa KP, yaitu Naufarrel Zhafif Abhista dan Zulfaqqar Nayaka Athadiansyah, yang sama-sama berperan sebagai \textit{Quality Assurance} di tim QA.
 
 \subsection{Lingkup Pekerjaan Tim QA}
-Tim QA memastikan aplikasi yang dikembangkan sesuai kebutuhan klien sebelum diserahkan. Caranya dengan menyusun \textit{test script}, menjalankan pengujian, melaporkan \textit{bug} ke \textit{developer}, dan memverifikasi perbaikannya. Pekerjaan kami bagian dari tugas itu, yaitu menguji modul-modul Komatsu ESS yang ditugaskan Ibu Alyssa. Peran kami dirangkum pada Tabel~\ref{tab:peran-kp}.
+Tim QA memastikan aplikasi yang dikembangkan sesuai kebutuhan klien sebelum diserahkan. Caranya dengan menyusun \textit{test script}, menjalankan pengujian, melaporkan \textit{bug} ke \textit{developer}, dan memverifikasi perbaikannya. Karena tim \textit{Developer} terbagi menurut platform, laporan \textit{bug} kami arahkan ke \textit{developer} yang mengerjakan platform terkait, misalnya \textit{web developer} untuk temuan pada aplikasi web Komatsu ESS. Pekerjaan kami bagian dari tugas itu, yaitu menguji modul-modul Komatsu ESS yang ditugaskan Ibu Alyssa. Peran kami dirangkum pada Tabel~\ref{tab:peran-kp}.
 
 \begin{table}[H]
 \caption{Peran mahasiswa KP pada tim QA proyek Komatsu ESS}
@@ -85,10 +101,10 @@ Pekerjaan kami terbagi menjadi enam tahap yang berurutan dan sedikit tumpang tin
 \end{table}
 
 \section{Jadwal Kerja}
-KP berlangsung 13 minggu, dari 22 Juni sampai 22 September 2026. Tabel~\ref{tab:jadwal-kerja} menunjukkan gambaran jadwalnya, dan kegiatan harian kami catat di \textit{Log Activity} pada Lampiran B. Jadwal ini mengikuti rencana di TOR (Lampiran A).
+KP berlangsung 13 minggu, dari 22 Juni sampai 22 September 2026. Tabel~\ref{tab:jadwal-kerja} memuat rencana jadwal kegiatannya, dan kegiatan harian kami catat di \textit{Log Activity} pada Lampiran B. Rencana ini mengikuti TOR (Lampiran A) dan menjadi acuan kami menyusun urutan pekerjaan.
 
 \begin{table}[H]
-\caption{Gambaran jadwal kegiatan selama KP}
+\caption{Rencana jadwal kegiatan selama KP}
 \label{tab:jadwal-kerja}
 \centering
 \begin{tabularx}{\textwidth}{|p{5cm}|c|X|}
