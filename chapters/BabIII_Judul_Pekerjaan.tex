@@ -12,7 +12,6 @@ Di awal KP, kami bertemu dengan Ibu Alyssa selaku \textit{Project Manager} sekal
 \item rencana kerja dan jadwal dituangkan dalam TOR di Lampiran A; dan
 \item kegiatan harian dicatat di \textit{log activity} dan dilaporkan ke Ibu Alyssa.
 \end{enumerate}
-\ISI{sesuaikan hasil pertemuan awal dengan yang sebenarnya terjadi}
 
 \subsection{Orientasi Aplikasi dan Lingkungan Kerja}
 Dua minggu pertama kami pakai untuk mengenal aplikasi Komatsu ESS, \textit{business flow}-nya, serta alat dan cara kerja tim. Tahap ini penting karena seorang \textit{tester} harus tahu dulu bagaimana aplikasi seharusnya berperilaku sebelum bisa menilai apakah suatu hasil salah. Kondisi awal aplikasi web saat kami mulai bekerja, banyak fitur yang belum termigrasi ke Metronic 8, sehingga kami perlu membandingkannya dengan Metronic 7 untuk tiap modul. Lingkungan pengujian berupa server dev Komatsu untuk Metronic 7 dan Metronic 8. Alat yang kami pakai sehari-hari dirangkum pada Tabel~\ref{tab:alat-kerja}.
@@ -90,7 +89,7 @@ Selain itu, kami juga mencatat \textit{bug} yang muncul di alur lintas modul, mi
 Contoh \textit{bug} yang tercatat pada alur lintas menu adalah kolom Hub dan Member yang tidak muncul setelah patroli Cross Patrol dibuat, serta tombol close pada \textit{follow up} Patrol 5K non-safety yang tidak muncul sehingga status tidak bisa diubah. Kedua \textit{bug} ini dilaporkan melalui Basecamp. Totalnya kami mencatat dua \textit{bug} interaksi, keduanya pada alur SHE dan berkategori \textit{Major} karena masing-masing menghalangi satu langkah pada alur. Keduanya kemudian ditandai \textit{Retest} di sheet \textit{Flow Apps} setelah \textit{developer} memperbaikinya.
 
 \section{\textit{Regression Testing}}
-\textit{Regression testing} dilakukan untuk memastikan perbaikan \textit{bug} atau perubahan fitur tidak merusak bagian aplikasi yang sebelumnya sudah jalan. Kami menjalankan ulang \textit{test script} yang relevan di \textit{build} terbaru dan memastikan \textit{bug} yang dilaporkan sudah teratasi. Tahap ini paling singkat karena \textit{test script} dan urutan pengujiannya sudah ada dari tahap sebelumnya, jadi tinggal dijalankan ulang. Pada sheet \textit{Flow Apps}, langkah yang sudah diperbaiki diberi penanda \textit{Retest}, misalnya penerimaan invoice vendor dan penerimaan hardcopy di alur IMS. Cakupan regresi kami terbatas pada \textit{test case} yang berkaitan dengan \textit{bug} yang diperbaiki, tidak seluruh 154 kasus uji, karena \textit{module testing} masih berjalan bergiliran dengan perbaikan dari \textit{developer}. Kami memantau statusnya di sheet \textit{Notes Retest} yang berisi 18 baris catatan retest per submodul. Dari 14 \textit{bug} hasil \textit{module testing}, satu (\textit{TC-JRV-017}) sudah berstatus \textit{Done} setelah diverifikasi ulang, sedangkan 13 lainnya masih \textit{Open} saat KP berakhir.
+\textit{Regression testing} dilakukan untuk memastikan perbaikan \textit{bug} atau perubahan fitur tidak merusak bagian aplikasi yang sebelumnya sudah jalan. Kami menjalankan ulang \textit{test script} yang relevan di \textit{build} terbaru dan memastikan \textit{bug} yang dilaporkan sudah teratasi. Tahap ini paling singkat karena \textit{test script} dan urutan pengujiannya sudah ada dari tahap sebelumnya, jadi tinggal dijalankan ulang. Pada sheet \textit{Flow Apps}, langkah yang sudah diperbaiki diberi penanda \textit{Retest}, misalnya penerimaan invoice vendor dan penerimaan hardcopy di alur IMS. Cakupan regresi kami terbatas pada \textit{test case} yang berkaitan dengan \textit{bug} yang diperbaiki, tidak seluruh 154 kasus uji, karena \textit{module testing} masih berjalan bergiliran dengan perbaikan dari \textit{developer}. Kami memantau statusnya di sheet \textit{Notes Retest} yang berisi catatan retest per submodul. Dari 14 \textit{bug} hasil \textit{module testing}, satu (\textit{TC-JRV-017}) sudah berstatus \textit{Done} setelah diverifikasi ulang, sedangkan 13 lainnya masih \textit{Open} saat KP berakhir.
 
 \section{Dinamika Pekerjaan dan Profesionalisme}
 Selama KP kami bekerja sehari-hari bersama tim proyek dan sering berkomunikasi dengan \textit{developer} soal \textit{bug} yang ditemukan. Beberapa dinamika yang kami alami:
@@ -115,7 +114,6 @@ Hasil pekerjaan kami selama KP dirangkum pada Tabel~\ref{tab:hasil-pekerjaan}.
 \textit{Test script} & \textit{Test script} untuk modul yang ditugaskan & 154 \\
 \hline
 \textit{Bug report} & \textit{Bug} yang ditemukan di \textit{module} (14) dan \textit{integration testing} (2) & 16 \\
-\hline
 \hline
 \end{tabularx}
 \end{table}
